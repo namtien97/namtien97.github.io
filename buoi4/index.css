@@ -1,0 +1,542 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.topAndNarBar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  top: 0;
+}
+.topBar {
+  background-color: #ed1c24;
+  width: 1239px;
+  height: 80px;
+  position: relative;
+}
+.logoTopBar img {
+  position: absolute;
+  width: 190.797px;
+  height: auto;
+  top: calc(50% - 57.525px / 2);
+}
+.searchBox {
+  width: 323.4px;
+  height: 40px;
+  padding-left: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 15px;
+  border: 1px;
+  position: absolute;
+  top: calc(50% - 20px);
+  bottom: calc(50% - 20px);
+  left: 161.8px;
+}
+.styleSearchBox {
+  width: 266.4px;
+  height: 28px;
+  padding-left: 15px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px;
+}
+.buttonSearchBox img {
+  width: 22px;
+  height: auto;
+  position: absolute;
+  left: 329px;
+  top: 13px;
+}
+.logoSignUp img {
+  border: solid 1px white;
+  border-radius: 50%;
+  height: 33px;
+  width: auto;
+  position: absolute;
+  left: 562.4px;
+  top: calc(50% - 33px / 2);
+  bottom: calc(50% - 33px / 2);
+}
+.textSignIn {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 58px / 2);
+  bottom: calc(50% - 7px / 2);
+  left: 605.4px;
+  font-size: 13px;
+}
+.textSignUp {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 19px / 2);
+  bottom: calc(50% - 19px / 2);
+  left: 605.4px;
+  font-size: 13px;
+}
+.logoCart img {
+  width: 34.38px;
+  height: 33px;
+  position: absolute;
+  top: calc(50% - 27px / 2);
+  bottom: calc(50% - 35px / 2);
+  left: 696px;
+}
+.yourProductInCart {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 19px / 2);
+  bottom: calc(50% - 19px / 2);
+  left: 734.4px;
+  font-size: 13px;
+}
+.yourCart {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 58px / 2);
+  bottom: calc(50% - 7px / 2);
+  left: 734.4px;
+  font-size: 13px;
+}
+.shippingArea {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 58px / 2);
+  bottom: calc(50% - 7px / 2);
+  left: 899px;
+  font-size: 13px;
+}
+.yourArea {
+  display: inline-block;
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  top: calc(50% - 19px / 2);
+  bottom: calc(50% - 19px / 2);
+  left: 899px;
+  font-size: 13px;
+}
+.navBar {
+  border-top: solid 0.1px;
+  border-bottom: solid 0.1px;
+  width: 1239px;
+  height: 40px;
+  background-color: #f1f0f1;
+  position: absolute;
+}
+.menu {
+  font-size: 13px;
+  position: absolute;
+  left: 20px;
+}
+.productWatched {
+  font-size: 12px;
+  position: absolute;
+  left: 665px;
+}
+.advisoryServices {
+  font-size: 12px;
+  position: absolute;
+  left: 939px;
+}
+.news {
+  font-size: 12px;
+  position: absolute;
+  left: 800px;
+}
+.iconNews img {
+  width: 18px;
+  height: 16px;
+  position: absolute;
+  left: 778px;
+  top: calc(50% - 16px / 2);
+  bottom: calc(50% - 16px / 2);
+}
+.iconPhone img {
+  position: absolute;
+  left: 915px;
+  top: calc(50% - 16px / 2);
+  bottom: calc(50% - 16px / 2);
+}
+.sloganPicture img {
+  padding-top: 113px;
+  padding-bottom: 9px;
+  width: 1239px;
+  height: auto;
+}
+.textSlogan {
+  border-top: solid red 2px;
+  font-size: 16px;
+  background: #eaeaea !important;
+  width: 1239px;
+  white-space: normal;
+  height: 55.11px;
+  text-align: center;
+  font-weight: bold;
+}
+.colorBackGround {
+  background-color: #f1f0f1;
+  width: 1239px;
+}
+.titleMenu {
+  display: inline-block;
+  font-size: 29px;
+  color: #f37067;
+  white-space: normal;
+  height: 55.11px;
+  line-height: 1.5;
+  margin: 0;
+}
+.productContainer:hover {
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: grey 2px 2px 2px 2px;
+}
+.productContainer {
+  padding: 15px;
+  width: 192px;
+  height: 380px;
+}
+.productName {
+  color: #333;
+  height: 44px;
+  margin-top: 10px;
+  word-break: break-word;
+  -webkit-line-clamp: 2 !important;
+}
+.productPrice {
+  font-weight: 700 !important;
+}
+.buttonAddProduct {
+  width: 160px;
+  height: 36px;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-color: red;
+}
+.textButtonAddProduct {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  padding-top: 11px;
+  margin: 0;
+}
+.productList {
+  display: flex;
+  position: relative;
+}
+.watchAll1 {
+  width: 1239px;
+  height: 48px;
+}
+.watchAll1 p {
+  position: absolute;
+  left: 465px;
+  right: 74px;
+  bottom: 9px;
+  border: solid 1px red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 166px;
+  height: 34px;
+  color: red;
+  font-weight: bold;
+}
+.watchAll2 {
+  width: 1239px;
+  height: 48px;
+}
+.watchAll2 p {
+  position: absolute;
+  left: 454px;
+  right: 74px;
+  bottom: 1px;
+  border: solid 1px red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 166px;
+  height: 34px;
+  color: red;
+  font-weight: bold;
+}
+.buttonGoToTop img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 49.6px;
+}
+.target {
+  display: flex;
+  margin-top: 66px;
+  border-top: solid 2px red;
+  height: 208px;
+  width: 1239px;
+}
+.blockTarge1 {
+  width: 295px;
+  height: 208px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentTarget1 img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 110px;
+  margin-right: auto;
+  margin-bottom: 14px;
+}
+.contentTarget1 p {
+  font-size: 15.21px;
+  color: #666666;
+  font-weight: bold;
+  text-align: center;
+}
+.blockTarge2 {
+  width: 295px;
+  height: 208px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentTarget2 img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 110px;
+  margin-right: auto;
+  margin-bottom: 14px;
+}
+.contentTarget2 p {
+  font-size: 15.21px;
+  color: #666666;
+  font-weight: bold;
+  text-align: center;
+}
+.blockTarge3 {
+  width: 295px;
+  height: 208px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentTarget3 img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 110px;
+  margin-right: auto;
+  margin-bottom: 14px;
+}
+.contentTarget3 p {
+  font-size: 15.21px;
+  color: #666666;
+  font-weight: bold;
+  text-align: center;
+}
+.blockTarge4 {
+  width: 295px;
+  height: 208px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contentTarget4 img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 110px;
+  margin-right: auto;
+  margin-bottom: 14px;
+}
+.contentTarget4 p {
+  font-size: 15.21px;
+  color: #666666;
+  font-weight: bold;
+  text-align: center;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: gray; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+.information1 {
+  background-color: #2c2c2c;
+  color: white;
+  width: 289px;
+  height: 240.06px;
+  padding: 4px;
+  float: left;
+}
+.information1 img {
+  width: 90px;
+  height: 27.14px;
+}
+.textInformation {
+  font-size: 13px;
+  padding-right: 48px;
+  padding-bottom: 6px;
+}
+.logoInformation {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.logoSaleNoti img {
+  width: 123px;
+}
+.information2 {
+  background-color: #2c2c2c;
+  color: white;
+  width: 289px;
+  height: 240.06px;
+  padding: 4px;
+  font-size: 12px;
+  float: left;
+  position: relative;
+}
+.textInformation2_1:hover {
+  color: #ed1c24;
+}
+.headingInformation2 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 5px;
+  color: #8b8b8b;
+}
+.textInformation2_1 {
+  position: absolute;
+  bottom: 189px;
+  left: 4px;
+}
+.textInformation2_2 {
+  position: absolute;
+  bottom: 168px;
+}
+.textInformation2_3 {
+  position: absolute;
+  bottom: 145px;
+}
+.textInformation2_4 {
+  position: absolute;
+  bottom: 121px;
+}
+.information3 {
+  background-color: #2c2c2c;
+  color: white;
+  width: 289px;
+  height: 240.06px;
+  padding: 4px;
+  font-size: 12px;
+  float: left;
+  position: relative;
+}
+.textInformation3:hover {
+  color: #ed1c24;
+}
+.headingInformation3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 5px;
+  color: #8b8b8b;
+}
+.textInformation3_1 {
+  position: absolute;
+  bottom: 189px;
+  left: 4px;
+}
+.textInformation3_2 {
+  position: absolute;
+  bottom: 168px;
+}
+.textInformation3_3 {
+  position: absolute;
+  bottom: 145px;
+}
+.textInformation3_4 {
+  position: absolute;
+  bottom: 121px;
+}
+.textInformation2_2:hover {
+  color: #ed1c24;
+}
+.textInformation2_3:hover {
+  color: #ed1c24;
+}
+.textInformation2_4:hover {
+  color: #ed1c24;
+}
+.textInformation3_1:hover {
+  color: #ed1c24;
+}
+.textInformation3_2:hover {
+  color: #ed1c24;
+}
+.textInformation3_3:hover {
+  color: #ed1c24;
+}
+.textInformation3_4:hover {
+  color: #ed1c24;
+}
+.informationContainer{
+  width: 1239px;
+  background-color: #2c2c2c;
+}
+.containerLocation{
+  background-color: #2c2c2c;
+  border-top: 1px solid #353535;
+  width: 1239px;
+  display: flex;
+}
+.location {
+  background-color: #363636;
+  color: #fff;
+  margin-top: 5px;
+  padding: 16px;
+  border-radius: 20px;
+  width: 348.150px;
+}
+.endFloat {
+  clear: both;
+}
+.locationHeading {
+  text-align: left;
+  color: #8b8b8b;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+ ;
+}
+.textLocation {
+  font-size: 12px;
+}

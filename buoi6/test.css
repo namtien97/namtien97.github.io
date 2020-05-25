@@ -1,0 +1,19 @@
+/* .grid-item{
+    border: solid 1px black;
+}
+.grid-container{
+    /* display: grid; */
+    /* grid-template-columns: 70px 70px 70px 70px; */
+    /* tạo ra từng 4 hàng có độ rộng là 70px*/
+    /* grid-template-columns: auto auto;
+    tạo ra 2 hàng có độ rộng là auto */
+    /* display: inline-grid;
+    grid-template-columns: auto auto;
+    tạo ra 1 bảng có độ rộng bằng inline có 2 cột */
+    /* display: grid;
+    grid-template-columns: 100px 100px 100px; */
+    /* grid-template-rows: 80px 200px 300px 400px; xác định chiều cao của từng row */
+    /* justify-content: space-around; */ /*điều chỉnh nội dung */
+
+}
+*/

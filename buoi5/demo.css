@@ -1,0 +1,21 @@
+body {
+   background-color: #003B74;
+}
+
+.outer-img{
+    width: 150px;
+    height: 300px;
+    border: solid 2px black;
+    
+}
+.img2{
+    position: absolute;/*làm cho ảnh trùng nhau*/
+    top: 0;
+    left: 0;
+    opacity: 0;/*độ đậm nhạt của ảnh, cái này cũng làm ẩn ảnh rồi sau đó tăng lên 1 để hiện*/
+}
+
+.img2:hover{
+    transition: 0.4s ease-in-out; /*tăng thời gian hiện ảnh lên để cho mượt*/
+    opacity: 1; /*làm cho ảnh hiện lên*/
+}
