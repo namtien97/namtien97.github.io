@@ -4,64 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Nguyễn Tiến Nam</title>
-    <link rel="stylesheet" href="index.css">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="indexYouTube.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- link với bootstrap -->
 </head>
 
 <body>
-    <div class="avatar"><img
-            src="data:image/jpeg;base64,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"
-            alt=""></div>
-    <div class="information">
-        <h1>Nguyễn Tiến Nam</h1>
-        <h2>Font-End Developer</h2>
-        <p>Tóm lược: Tốt nghiệp Quản trị kinh doanh Trường Đại học Kinh tế Kỹ thuật Công nghiệp. Học Font-End
-            Developer tại Techmaster</p>
+    <div class="navbarCustom">
+        <div class="menuIcon">
+            <img src="https://img.icons8.com/android/24/000000/menu.png" />
+        </div>
+        <div class="logoYouTube">
+            <img src="logoYouTube.png" alt="Trang chủ YouTube">
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+        <div class="keyboardIcon">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/keyboard.png" />
+        </div>
+        <div class="cameraIcon">
+            <img src="https://img.icons8.com/material-rounded/24/000000/camera--v2.png" />
+        </div>
+        <div class="menuIcon2">
+            <img src="https://img.icons8.com/material/100/000000/squared-menu--v2.png" />
+        </div>
+        <div class="bellIcon">
+            <img src="https://img.icons8.com/android/24/000000/bell.png" />
+        </div>
+        <div class="iconSearch">
+            <img src="https://img.icons8.com/metro/26/000000/google-web-search.png" />
+        </div>
+        <div class="logoAcc">
+            <img src="https://lh5.googleusercontent.com/--4_jUMjB0HA/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclCO_hOuAbaJ4bmpIKeRwq4Cwg6Kw/s88-c-k-c0x00ffffff-no-rj-mo/photo.jpg"
+                alt="logoAcc">
+        </div>
     </div>
-    <div class="icon1"><img
-            src="https://p7.hiclipart.com/preview/915/706/543/dialer-android-google-play-telephone-phone.jpg" alt="">
+    <div class="sidebarContainer">
+        <div class="sidebar">
+            <div class="home">
+                <img src="https://img.icons8.com/flat_round/64/000000/home--v1.png" />
+                <span>Trang chủ</span>
+            </div>
+            <div class="trending">
+                <img src="https://img.icons8.com/android/24/000000/fire-element.png" />
+                <span>Thịnh hành</span>
+            </div>
+            <div class="dangKy">
+                <img src="https://img.icons8.com/ios-glyphs/24/000000/youtube-squared.png" />
+                <span>Đăng ký</span>
+            </div>
+            <div class="collect">
+                <img src="https://img.icons8.com/material-rounded/24/000000/play.png" />
+                <span>Thư viện</span>
+            </div>
+        </div>
     </div>
-    <div class="hr1">
-        <hr>
+    <div class="mainContainer">
+        <div class="suggest">
+            <span>Đề xuất</span>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/0ebwoz5Fzjg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/c3Jl8ZIPcmw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/INJUUntKumo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/bNmQybkiqDs" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/qCXuoZwbQas" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/rvFM6fkoeWw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/aIDIT6kBHi0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe class="videoSuggest" width="337.79" height="189.53"
+                        src="https://www.youtube.com/embed/Ogx8E-kWYB8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="inforVideo">
+                        <div class="logoChannel"><img
+                                src="https://yt3.ggpht.com/a-/AOh14GgpLUfWM1ByLlKiCifqAXz5FC0xJuStJCbhCQ=s68-c-k-c0x00ffffff-no-rj-mo"
+                                alt=""> </div>
+                        <div class="informationVideo"><span class="videoName">Tên video</span>
+                            <span class="videoChannel">Tên kênh</span>
+                            <div class="nextToNext"><span class="viewRate">Số lượt xem</span>
+                                <span class="timePublish">Thời gian xuất bản</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="headingContact">
-        <p>Thông tin cá nhân</p>
-    </div>
-    <div class="detailContact">
-        <p>Address:</p>
-        <p>Email:</p>
-        <p>Phone:</p>
-        <p>Website:</p>
-    </div>
-    <div class="icon2"><img
-            src="data:image/jpeg;base64,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"
-            alt=""></div>
-    <div class="hr2">
-        <hr>
-    </div>
-    <div class="headingEducation">
-        <p>Học vấn</p>
-    </div>
-    <div class="detailEducation">
-        <h3>Đại học Kinh tế Kỹ thuật Công nghiệp</h3>
-        <p>2016-2020</p>
-        <h3>Techmaster</h3>
-        <p>2020-2021</p>
-    </div>
-    <div class="icon3"><img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEU0mNspgLn///8rhcAdfLeCsdMlfrgqgrxDi74Id7UticXU5PAxkdEhfbg1mt0ylNXj7fXx9/qWvNng7PQvhLtwps0Ac7PK2+qOuNfq8veixN1qoMlJkcJbmcY4iL2qyeB8rdG91ObC2Og1VBBKAAADZElEQVR4nO3dyXKrMBCFYUkowiIYTziewNP7P+SVwGOyuBuru9R1vrWrrL8kMGSRVkY6xb2A5FCYPxTmD4X5Q2H+UJg/FOYPhflDYf7+FC7m35+044h681a42h9a/2G2+7ouuOqil8JNb+1Uf5yz/rhkbHwUrnqfIO/G6hN74T5hX+R7rm28FZ590r7AHlechevkgVpPW57EofBs0wfGRJaDGgsvBDsY2Z6pcGcdTaH2HHfUULgmOaMDN0mtO2wvi1+FK7rAkJjc1Frfnd4KvygLaTh/PL0UltzrScH5/v7Mr76JbqTUnN3cCvfyDumNv4yF67TPo4ycvw6FHfdCErLxWlRH7mUkNO1iIfcqkvJ76YU6POwLLwybKLzQddILtZ9LL7Qn8YVn6YWuF194JC8s0wrv2O/f15IX1o1KrK7eXnkFFoYvqAvRhTGyqR/7SF3oCPqGRlU5nsKSYgvHxpqnsCIrDFcjR6Gb0QXeEokLC8pA1VT0hSR30hcldWFBHBjvNqSFtFfhoKQtrMkDwyZSFlbkgQFlIeVP4VNBV0h/RKOmoios6W8yo5qk0JW1YjmiwSx9odMVX1/0e0FF9Vn1rGk4+94Li/rTVwt3XfTsqxTrYUrmsX/cC0nmFkj90E9oDOT6taIwBsrdwbFQ8BFVQyHPEyMZ+hdvasIvwkD8FirhtxkV3/KlY/njCSnxh1QJ/zFU8S0fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPIl/b/Oz8RPDqilT39oaiV33tqoED+FRQufpDPMAxY9Dakp4jxgwZs4zOVudcm9joRK3aqjYxq2TKCptDuq3skdnhfOqOvV1kodgBgvQm236mK10BGIMVDbi9r5+6hcURpVDV1+ocxhOk7LFfWS0cyKcWT2wShz8feJxzMhE4+bZlbdmvwlFJrOPWdyS9jIuioeU887Ewuv900clGWRtfI1xl+HQnO2f0a+y2DPZiw0E/f/T2fITcy9cN5OuVeTwLTdPQpDoryDatu5eRaaRedlnVTnu4V5LTRm6SVto7XLe9ij0MzXP9ZJ2Ejn7M96bv4WGrNbTpy3ufOuW+5eql4L40Zu9tuvnG33m/l70q9CgVCYPxTmD4X5Q2H+/gE8aosCeUly2gAAAABJRU5ErkJggg=="
-            alt=""></div>
-    <div class="hr3">
-        <hr>
-    </div>
-    <div class="headingHistory">
-        <p>Kinh nghiệm làm việc</p>
-    </div>
-    <div class="detailHistory">
-        <h3>Google</h3>
-        <p>2022-2025</p>
-        <h3>Apple</h3>
-        <p>2025-2026</p>
-    </div>
-    <hr class="vertical" />
+    <!-- Nhúng bootstrap vào html phải nhúng jquery trước, link jquery phải để bên trên -->
+    <!-- Không nên nhúng bootstrap vào html như thế này sẽ làm chậm web, nên tải bootstrap về máy rồi nhúng vào -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script><!-- Nhúng jquery vào-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

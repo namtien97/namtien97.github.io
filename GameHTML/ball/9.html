@@ -27,13 +27,13 @@ Giá tốc trọng trường, bóng rơi, nhưng khi đập đất vẫn kêu b�
     canvas.width = innerWidth;
     canvas.height = innerHeight;
   });
-
+  
 
   class Ball {
     constructor(x, y, dy, radius, color) {
       this.x = x;
       this.y = y;
-      this.dy = dy;      
+      this.dy = dy;
       this.radius = radius;
       this.color = color;
     }
@@ -52,7 +52,7 @@ Giá tốc trọng trường, bóng rơi, nhưng khi đập đất vẫn kêu b�
     move() {
       if (this.y + this.radius + this.dy > canvas.height) { //đập đất
         this.dy = -this.dy;
-        this.dy = this.dy * friction;        
+        this.dy = this.dy * friction;
         var x = document.getElementById("ball_hit");
         x.play();
       } else {
