@@ -1,0 +1,289 @@
+.containerNavbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-left: 172px;
+  margin-right: 172px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  z-index: 99;
+  background-color: #FFFFFF;
+}
+#lotus-logo {
+  width: 33px;
+  height: 30px;
+  fill: #cd0f32;
+  stroke: transparent;
+}
+#lotus-text {
+  width: 68px;
+  height: 22px;
+  fill: #002d64;
+  stroke: transparent;
+  position: relative;
+  top: 4px;
+}
+.logo {
+  display: inline-block;
+}
+.containerNotice {
+  margin-left: 16px;
+  background: #efeff4;
+  border-radius: 20px;
+  padding: 4px 8px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+}
+.noticeNavbar {
+  font: normal 15px/19px SF;
+  color: #111;
+}
+#icon-token {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #1f9ffc;
+}
+.clearFloat {
+  clear: both;
+}
+.navbarLeft {
+  display: inline-block;
+}
+.navbarRight {
+  display: flex;
+  position: absolute;
+  top: 23px;
+  right: 0px;
+}
+.containerSignIn {
+  color: #1f9ffc;
+  border: 2px solid #1f9ffc;
+  box-sizing: border-box;
+  border-radius: 100px;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 16px;
+  height: 28px;
+  font: normal 13px/28px SFSemiBold;
+  margin-top: -3px;
+  display: flex;
+}
+.embedCode {
+  content: "";
+  display: inline-block;
+  border-right: 2px solid #eee;
+  margin-left: 10px;
+  height: 12px;
+}
+.embedCode2 {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  height: 12px;
+}
+.signUp {
+  color: #fff;
+  background: #1f9ffc;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  padding: 0 16px;
+  border-radius: 28px;
+  height: 28px;
+  font: normal 13px/28px SFSemiBold;
+  margin-top: -3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+.mainContent {
+  margin-top: 113px;
+}
+.menuLotus {
+  margin-bottom: 30px;
+  padding: 15px 0 0 15px;
+  background: #fff;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  width: 155px;
+  height: 308px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 99;
+}
+#home {
+  width: 20px;
+  height: 20px;
+  fill: #aaa;
+  stroke: transparent;
+}
+.trending {
+  display: flex;
+  font: normal 15px/20px SF;
+  color: #aaa;
+  white-space: nowrap;
+  align-items: center;
+}
+.homePage {
+  display: flex;
+  font: normal 15px/20px SF;
+  color: #aaa;
+  white-space: nowrap;
+  align-items: center;
+}
+.trending :hover {
+  color: #333;
+}
+.homePage:hover {
+  color: #333;
+}
+.iconTrending {
+  width: 16px;
+  height: 16px;
+  fill: #aaa;
+  stroke: transparent;
+}
+.iconGroup {
+  width: 16px;
+  height: 16px;
+  fill: #aaa;
+  stroke: transparent;
+}
+.group {
+  display: flex;
+  font: normal 15px/20px SF;
+  color: #aaa;
+  white-space: nowrap;
+  align-items: center;
+}
+.group:hover {
+  color: #333;
+}
+#iconEntertainment {
+  width: 16px;
+  height: 16px;
+  fill: #aaa;
+  stroke: transparent;
+}
+.entertainment {
+  display: flex;
+  font: normal 15px/20px SF;
+  color: #aaa;
+  white-space: nowrap;
+  align-items: center;
+}
+.entertainment:hover {
+  color: #333;
+}
+#iconInforLotus {
+  width: 16px;
+  height: 16px;
+  fill: #aaa;
+  stroke: transparent;
+}
+.inforLotus {
+  display: flex;
+  font: normal 15px/20px SF;
+  color: #aaa;
+  white-space: nowrap;
+  align-items: center;
+}
+.inforLotus:hover {
+  color: #333;
+}
+.colorForInforLotus {
+  width: auto;
+  height: 90px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.inforLotus span {
+  padding-left: 10px;
+}
+.homePage span {
+  padding-left: 10px;
+}
+.group span {
+  padding-left: 10px;
+}
+.trending span {
+  padding-left: 10px;
+}
+.entertainment span {
+  padding-left: 10px;
+}
+.postStatusHere {
+  border: none;
+  width: 100%;
+  resize: none;
+  height: 1.4em;
+  line-height: 1.4em;
+  min-height: 1.4em;
+  overflow: hidden;
+  display: block;
+  outline: none;
+  font-family: inherit;
+}
+.boardPostStatus {
+  padding: 15px;
+  display: inline-block;
+  width: 100%;
+  min-height: 153px;
+}
+.boardPostStatusContainer {
+  display: block;
+  height: 100%;
+}
+.lotusPostForm {
+  font-family: SF;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+}
+.grLotusPost {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+.postStatusOption {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 16px 15px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.leftPageInfo b {
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+.leftPageInfo svg{
+  width: 16px;
+  height: 18px;
+  fill: #888;
+  stroke: transparent;
+}
+.leftPageInfo {
+  align-items: center;
+  font: normal 13px/17px SF;
+  color: #8a8a8f;
+  display: block;
+}

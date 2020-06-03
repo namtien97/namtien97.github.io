@@ -1,0 +1,266 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  font-family: "roboto";
+  background-color: #f2f2f2;
+  height: 100vh;
+  /* vh la view height */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar__left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar__left__icon {
+  color: #dadada;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.navbar__left__text {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #507bfc;
+}
+
+.search__box input {
+  background: rgba(245, 247, 250, 0.2);
+  border: 1px solid #f5f7fa;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 40px;
+  width: 800px;
+}
+
+::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #98a0a6;
+  mix-blend-mode: normal;
+  opacity: 0.45;
+}
+
+.navbar__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar img {
+  border-radius: 50%;
+  height: 25px;
+  margin: 5px;
+}
+
+.user__name span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #98a0a6;
+}
+
+.navbar__right__icon img {
+  background: #bfc5d1;
+  width: 10.88px;
+  height: 6.38px;
+  margin: 5px;
+}
+
+.groupbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 90px 0;
+}
+
+.groupbar__left {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.groupbar__left__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #507bfc;
+  box-shadow: 0px 10px 20px rgba(80, 123, 252, 0.5);
+  border-radius: 3px;
+}
+
+.groupbar__left__icon i {
+  color: #fff;
+}
+
+.groupbar__left__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.groupbar__left__text__1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1b2437;
+}
+
+.groupbar__left__text__2 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #94969a;
+}
+
+.groupbar__right__text {
+  display: flex;
+}
+
+.groupbar__right__text__1 {
+  width: 126px;
+  height: 40px;
+  background: #f2f2f2;
+  border-radius: 100px;
+  border: 1px solid #dee1e6;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupbar__right__text__1:hover {
+  background-color: #507bfc;
+  color: #fff;
+}
+
+.groupbar__right__text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #94969a;
+}
+
+.card__list {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 304px;
+  background-color: #fff;
+  padding: 16px;
+  margin: 20px;
+}
+
+.card__icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.card__icon span {
+  color: #bfc5d1;
+}
+
+.card__icon span :hover {
+  color: #fa5f7d;
+}
+
+.card__thumbnail img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  color: #1b2437;
+  margin: 16px 0;
+  font-weight: 500;
+}
+
+.email {
+  font-size: 14px;
+  color: #98a0a6;
+  font-weight: 500;
+}
+
+.card__btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.card__btn button {
+  flex-basis: 48%;
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 12px 0;
+  border-radius: 100px;
+}
+
+.card__btn button :hover {
+  background-color: #507bfc;
+  color: #fff;
+}
+
+.btn__icon {
+  color: #bfc5d1;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.btn__name {
+  color: #98a0a6;
+  font-size: 14px;
+}
+
+.card__btn button:hover .btn__icon,
+.card__btn button:hover .btn__name {
+  color: #fff;
+}
