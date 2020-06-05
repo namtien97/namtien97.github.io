@@ -27,7 +27,6 @@ img {
   display: flex;
   height: 68px;
 }
-
 .header__title {
   display: flex;
   flex-grow: 9;
