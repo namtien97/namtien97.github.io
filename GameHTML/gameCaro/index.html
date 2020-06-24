@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Caro</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="1420px" height="700px" style="background: #fff; margin:20px"></canvas>
+</body>
+
+<script>
+
+    // Box width
+    var bw = 1400;
+    // Box height
+    var bh = 680;
+    // Padding
+    var p = 10;
+
+    function Create2DArray(bw) {
+        var boardArr = [];
+
+        for (let i = 0; i <= bw; i++) {
+            boardArr[i] = [];
+        }
+
+        return boardArr;
+    }
+
+    var playerArr1 = [];
+    var playerArr2 = [];
+
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    function drawBoard() {
+        for (var x = 0; x <= bw; x += 40) {
+            context.moveTo(0.5 + x + p, p);
+            context.lineTo(0.5 + x + p, bh + p);
+        }
+
+        for (var x = 0; x <= bh; x += 40) {
+            context.moveTo(p, 0.5 + x + p);
+            context.lineTo(bw + p, 0.5 + x + p);
+        }
+        context.strokeStyle = "black ";
+        context.stroke();
+    }
+
+    drawBoard();
+</script>
+
+</html>

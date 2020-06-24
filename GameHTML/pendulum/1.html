@@ -2,42 +2,39 @@
 <html>
 
 <body>
-  <canvas id="canvas" width="400" height="400" style="background-color:#333"></canvas> 
-  <!-- vẽ 1 background màn đen -->
+  <canvas id="canvas" width="400" height="400" style="background-color:#333"></canvas>
 </body>
-
 </html>
 <script>
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
 
   class Pendulum {
-    //Khai báo các biến của quả lắc
     constructor(context, x, y, length, radius, angle) {
       this.ctx = context;
       this.x = x; //điểm tâm quay
-      this.y = y;// khai bác các điểm mà quả lắc sẽ quay
-      this.length = length;//khai báo độ dài quả lắc
-      this.radius = radius;//khai báo R của quá lắc
-      this.angle = angle;//Khai báo góc quay của quả lắc
+      this.y = y;
+      this.length = length;
+      this.radius = radius;
+      this.angle = angle;
     }
 
     update() {
-      let c = this.ctx;// gắn context với biến c
+      let c = this.ctx;
       c.beginPath();
       c.lineWidth = 4;
       c.lineCap = "round";
       c.moveTo(this.x, this.y);
-      c.strokeStyle = "white";
-      c.lineTo(this.x + this.length * Math.cos(this.angle),
-        this.y + this.length * Math.sin(this.angle));
+      c.strokeStyle = "white";      
+      c.lineTo(this.x + this.length * Math.cos(this.angle), 
+      this.y + this.length * Math.sin(this.angle));
       c.stroke();
 
       c.beginPath();
-      c.arc(this.x + (this.length + this.radius) * Math.cos(this.angle),
-        this.y + (this.length + this.radius) * Math.sin(this.angle),
-        this.radius, 0, Math.PI * 2, false);
-
+      c.arc(this.x + (this.length + this.radius) * Math.cos(this.angle), 
+      this.y + (this.length + this.radius)* Math.sin(this.angle), 
+      this.radius, 0, Math.PI * 2, false);
+      
       c.fillStyle = this.color;
       c.fill();
       c.stroke();
@@ -47,7 +44,7 @@
     }
   }
 
-  let pendulum = new Pendulum(ctx, canvas.width * 0.5, 10, canvas.height * 0.5, 15, Math.PI * 0.8);
+  let pendulum = new Pendulum(ctx,canvas.width * 0.5, 10, canvas.height * 0.5, 15, Math.PI * 0.8);
   function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
