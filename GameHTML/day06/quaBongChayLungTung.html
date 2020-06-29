@@ -44,6 +44,7 @@
                 if (this.y - this.radius <= 0) {
                     //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
                     this.y = canvas.height - this.radius;
+                    this.x = randomIntFromRange(0, canvas.width);
                 }
                 this.draw();
             }
