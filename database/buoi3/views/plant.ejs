@@ -1,0 +1,43 @@
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Chi tiết cây</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/doodle/48/000000/potted-plant--v1.png" />
+    <link rel="stylesheet" href="views/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__title">
+            <span>
+                Cây cảnh trong nhà
+            </span>
+        </div>
+    </div>
+    <div class="content__container">
+        <div class="content__detail">
+            <form method="POST" action="/updatePlant">
+                <% plants.forEach((plants,index) => { %>
+                <input type="hidden" id="idplant" name="idplant" value="<%= plants.idplant%>">
+                <input type="text" id="plantImg" name="plantImg" value="<%= plants.plantImg%>">
+                <input type="text" id="plantName" name="plantName" value="<%= plants.plantName%>">
+                <button type="submit">Cap nhat plant</button>
+            </form>
+            <form method="POST" action="/deletePlant">
+                <input type="hidden" id="idplant" name="idplant" value="<%= plants.idplant%>">
+                <button type="submit">Xoa plant</button>
+            </form>
+        </div>
+        <%});%>
+    </div>
+</body>
+
+
+
+</html>
