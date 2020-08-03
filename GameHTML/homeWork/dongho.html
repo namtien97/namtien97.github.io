@@ -1,0 +1,180 @@
+<html>
+
+<body>
+
+    <canvas id="canvas" width="400" height="600" style="background-color:#123456"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.width / 2;
+        radius = radius * 0.70;
+
+        function amAndPM(ctx, radius) {
+            var ampm = "AM";
+            var now = new Date();
+            var hrs = now.getHours();
+            ctx.strokeStyle = "#000";
+            //Neu 12h tro di thi hien thi PM
+            if (hrs >= 12) ampm = "PM";
+            ctx.lineWidth = 1;
+            ctx.strokeRect(21, -14, 44, 27);
+            ctx.fillText(ampm, 43, 0);
+            ctx.lineWidth = 6;
+        };
+
+        function dayDate(ctx, radius) {
+            var day = "";
+            var now = new Date();
+            var dayNow = now.getDay();
+            var dateNow = now.getDate();
+            if (dayNow == 0) day = "Su";
+            ctx.fillText(dateNow, -63, -1);
+            ctx.fillText(day, -43, -1);
+            ctx.lineWidth = 1;
+            ctx.strokeRect(-83, -14, 64, 27);
+            ctx.lineWidth = 6;
+            if (dayNow == 1) day = "Mo";
+            ctx.fillText(day, -43, -1);
+            if (dayNow == 2) day = "Tu";
+            ctx.fillText(day, -43, -1);
+            if (dayNow == 3) day = "We";
+            ctx.fillText(day, -43, -1);
+            if (dayNow == 4) day = "Th";
+            ctx.fillText(day, -43, -1);
+            if (dayNow == 5) day = "Fr";
+            ctx.fillText(day, -43, -1);
+            if (dayNow == 6) day = "Sa";
+            ctx.fillText(day, -43, -1);
+        }
+
+        
+
+        function drawFace(ctx, radius) {
+            var grad;
+
+            ctx.beginPath();
+            ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+
+            grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+            grad.addColorStop(0, '#333');
+            grad.addColorStop(0.5, 'white');
+            grad.addColorStop(1, '#333');
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = radius * 0.1;
+            ctx.stroke();
+
+            // Vẽ một điểm ở chính tâm quay kim đồng hồ
+            ctx.beginPath();
+            ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+            ctx.fillStyle = '#333';
+            ctx.fill();
+            ctx.closePath();
+
+
+        }
+
+        function drawNumbers(ctx, radius) {
+            var ang;
+            var num;
+            ctx.font = radius * 0.15 + "px arial";
+            ctx.textBaseline = "middle";
+            ctx.textAlign = "center";
+            for (num = 1; num < 13; num++) {
+                ang = num * Math.PI / 6 - 0.5 * Math.PI;
+                ctx.fillText(num.toString(), radius * 0.85 * Math.cos(ang), radius * 0.85 * Math.sin(ang));
+            }
+        }
+
+        function drawTime(ctx, radius) {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+            var milisecond = now.getMilliseconds();
+
+            // second: mỗi giây, kim giây quay được một góc Math.PI / 30
+            second = (second * Math.PI / 30) + (milisecond * Math.PI / 30000);
+            drawHand(ctx, second, radius * 0.9, radius * 0.02);
+
+            //minute: trong cùng 1 phút ~ Math.PI/30, tính thêm góc dư do kim giây
+            minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+            drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+
+
+            //hour: trong cung một giờ ~ Math.PI/6 , tính thêm góc dư do phút, giây
+            hour = hour % 12;
+            hour = (hour * Math.PI / 6) + (minute * Math.PI / (6 * 60)) + (second * Math.PI / (360 * 60));
+            drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+        }
+
+        function drawHand(ctx, angle, length, width) {
+            ctx.beginPath();
+            ctx.lineWidth = width;
+            ctx.lineCap = "round";
+            ctx.moveTo(0, 0);
+            angle -= Math.PI * 0.5;
+            ctx.lineTo(length * Math.cos(angle), length * Math.sin(angle));
+            ctx.stroke();
+        }
+
+        class Pendulum {
+            constructor(context, x, y, length, radius, beta) {
+                this.ctx = context;
+                this.x = x; //điểm tâm quay
+                this.y = y;
+                this.length = length;
+                this.radius = radius;
+                this.beta = beta; //Lưu lại góc ban đầu   
+                this.T = 0;
+                this.deltaT = 0.02;
+            }
+
+            update() {
+                // Đây mới là công thức đúng phù hợp với tính chất vật lý con lắc đơn
+                this.angle = this.beta * Math.sin(this.T) + Math.PI * 0.5;
+                this.T += this.deltaT;
+
+                let c = this.ctx;
+                c.beginPath();
+                c.lineWidth = 4;
+                c.lineCap = "round";
+                c.moveTo(this.x, this.y);
+                c.strokeStyle = "white";
+                c.lineTo(this.x + this.length * Math.cos(this.angle),
+                    this.y + this.length * Math.sin(this.angle));
+                c.stroke();
+
+                c.beginPath();
+                c.arc(this.x + (this.length + this.radius) * Math.cos(this.angle),
+                    this.y + (this.length + this.radius) * Math.sin(this.angle),
+                    this.radius, 0, Math.PI * 2, false);
+
+                c.fillStyle = this.color;
+                c.fill();
+                c.stroke();
+                c.closePath();
+            }
+        }
+
+        let pendulum = new Pendulum(ctx, 0, 0, canvas.height * 0.6, 15, Math.PI * 0.2);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.save();
+            ctx.translate(canvas.width / 2, 170);
+            pendulum.update();
+            drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
+            amAndPM(ctx, radius);
+            dayDate(ctx, radius);
+            ctx.restore();
+        }
+        animate();
+    </script>
+</body>
+
+</html>

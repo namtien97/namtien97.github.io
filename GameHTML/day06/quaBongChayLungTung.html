@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h1>Neu qua 10 qua bong ban se thua!</h1>
     <canvas id="canvas" style="
         position: absolute;
         top: 0;
@@ -59,11 +60,28 @@
 
         });
 
+        addEventListener('click', (event) => {
+            console.log(`${event.offsetX},${event.offsetY}`);
+            let n = balls.length;
+            while (n--) {
+                let ball = balls[n];
+                if (Math.pow((event.offsetX - ball.x), 2) + Math.pow((event.offsetY - ball.y), 2) < Math.pow(ball.radius, 2)) {
+                    balls.splice(n, 1);
+                }
+            }
+
+        });
+
+
 
         function animate() {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
             balls.forEach(ball => ball.move());
+            if (balls.length === 10) {
+                console.log(balls.length);
+                alert('Ban da thua!');
+            };
         }
         animate();
 
@@ -78,6 +96,7 @@
         function randomIntFromRange(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
+
 
     </script>
 </body>

@@ -33,21 +33,23 @@
 
         class Square {
             constructor(centerx, centery, width, color, rotate) {
-                this.SoLieu[i].centerx = centerx;
-                this.SoLieu[i].centery = centery;
-                this.SoLieu[i].rect_width = width;
-                this.SoLieu[i].color = color;
-                this.SoLieu[i].rotate = rotate;
+                square.centerx = centerx;
+                square.centery = centery;
+                square.rect_width = width;
+                square.color = color;
+                square.rotate = rotate
             }
             draw() {
-                c.fillStyle = this.SoLieu[i].color;
-                if (!this.SoLieu[i].rotate) {
-                    c.fillRect(this.SoLieu[i].centerx - this.SoLieu[i].rect_width / 2, this.SoLieu[i].centery - this.SoLieu[i].rect_width / 2, this.SoLieu[i].rect_width, this.SoLieu[i].rect_width);
+                let rect_width = 200;
+                c.fillStyle = square.color;
+
+                if (!this.rotate) {
+                    c.fillRect(square.centerx - square.rect_width / 2, square.centery - square.rect_width / 2, square.rect_width, square.rect_width);
                 } else {
                     c.save();
-                    c.translate(this.SoLieu[i].centerx, this.SoLieu[i].centery);
+                    c.translate(square.centerx, square.centery);
                     c.rotate(Math.PI / 4);
-                    c.fillRect(- this.SoLieu[i].rect_width / 2, - this.SoLieu[i].rect_width / 2, this.SoLieu[i].rect_width, this.SoLieu[i].rect_width);
+                    c.fillRect(- square.rect_width / 2, - square.rect_width / 2, square.rect_width, square.rect_width);
                     c.restore();
                 }
             }
@@ -56,34 +58,17 @@
         let centerx = canvas.width / 2;
         let centery = canvas.height / 2;
 
-        var SoLieu = [
-            {
-                centerx: 'centerx',
-                centery: 'centery',
-                rect_width: 400,
-                color: '#4472C4',
-                rotate: 'false'
-            }, {
-                centerx: 'centerx',
-                centery: 'centery',
-                rect_width: 400 / 1.414,
-                color: 'white',
-                rotate: 'true'
-            }, {
-                centerx: 'centerx',
-                centery: 'centery',
-                rect_width: (400 / 1.414) / 1.414,
-                color: '#4472C4',
-                rotate: 'false'
-            }
-        ];
-
+        var square = new Square(1);
+        square[0] =
+            (centerx, centery, 400, '#4472C4', false);
+        square[1] =
+            (centerx, centery, 400 / 1.414, 'white', true);
 
         function animate() {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, canvas.width, canvas.height);
-            for (i = 0; i <= SoLieu.length; i++) {
-                SoLieu[i].draw();
+            for (var i = 0; i < 2; i++) {
+                square[i].draw();
             }
         }
 

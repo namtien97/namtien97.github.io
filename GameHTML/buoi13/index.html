@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false
+        // - Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra
+
+        // Ví dụ: checkStringExist("i love you", "you") => true
+
+        // checkStringExist("i love you", "hate") => false
+
+        //Bai lam
+
+        // function checkStringExist(str, cstr) {
+        //     var arr1 = str.split(' ');
+        //     var arr2 = cstr.split(' ');
+        //     let n1 = arr1.length;
+        //     let n2 = arr2.length;
+        //     for (let j = 0; j < n1; j++) {
+        //         for (let i = 0; i < n2; i++) {
+        //             if (arr1[i] == arr2[j]) {
+        //                 console.log(true);
+        //             } else {
+        //                 console.log(false);
+        //             }
+        //         }
+        //     }
+        // };
+        // let str = 'i love you';
+        // let cstr = 'yu love';
+        // checkStringExist(str, cstr);
+
+        // Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. 
+        // Ví dụ: shortenString('Xin chào các bạn') => Kết quả trả về là 'Xin chào...'
+
+        //Bai lam
+
+        // function shortenString(str) {
+        //     console.log(str.slice(0, 8) + '...')
+        // };
+
+        // let str = 'Xin chao cac ban'
+        // shortenString(str);
+
+        // Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên.
+        // Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => Kết quả trả về là 'Chào Mừng Đến Với Techmaster'
+
+        //Bai lam
+
+        // function capitalizeString(str) {
+        //     let n = str.toLowerCase();
+        //     console.log(n.slice(0, 1).toUpperCase() + n.slice(1));
+        // }
+        // str = 'chÀo MừnG đẾn với techMaster'
+        // capitalizeString(str);
+
+        // Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.
+
+        //Bai lam
+
+        // function copy(str) {
+        //     let n = [];
+        //     for (let i = 0; i < 10; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.toString());
+        // }
+        // let str = 'copy 10 lan';
+        // copy(str);
+
+        // Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
+        // Ví dụ: repeatString('a') => Kết quả trả về là 'a-a-a-a-a-a-a-a-a-a'
+
+        //Bai lam
+
+        // function copy(str) {
+        //     let n = [];
+        //     for (let i = 0; i < 10; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.join('-'));
+        // }
+        // let str = 'a';
+        // copy(str);
+
+
+        // Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+        // Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'
+
+        // function copy(str,soLan) {
+        //     let n = [];
+        //     for (let i = 0; i < soLan; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.join('-'));
+        // }
+        // let str = 'a';
+        // let soLan = 5;
+        // copy(str,soLan);
+
+        // Bài 7. Viết hàm đảo ngược chuỗi.Viết function với đầu vào là 1 chuỗi string.Trả về chuỗi đảo ngược của chuỗi đó
+        // Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'
+
+        let reverseString = (str) => {
+            let arr = str.split('');
+            let arr1 = [];
+            for (let i = arr.length; i <= 0; i--) {
+                arr1[i]
+            }
+        }
+        let str = 'Hello'
+        reverseString(str);
+    </script>
+</body>
+
+</html>

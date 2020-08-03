@@ -1,21 +1,34 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongodb = require("mongodb"); //import mongodb native drivers
-const MongoClient = mongodb.MongoClient;  //khai bao bien MongoClient để sử dụng mongodb
-var url = 'mongodb://localhost:27017/DBQuanLyCay';
+// const mongodb = require("mongodb"); //import mongodb native drivers
+// const MongoClient = mongodb.MongoClient;  //khai bao bien MongoClient để sử dụng mongodb
+// var url = 'mongodb://localhost:27017/DBQuanLyCay';
+var mysql = require('mysql');
 
 const app = express();
 
-let db;
+const con = mysql.createConnection({
+    host: '127.0.0.1',
+    user: 'root',
+    password: 'techmaster',
+    database: 'dbplant'
+});
 
-MongoClient.connect(url, function (err, client) {
-    if (err) {
-        console.log('Khong the ket noi toi mongoDB server. Loi la', err)
-    } else {
-        console.log('da ket noi duoc', url);
-        db = client.db("DBQuanLyCay");
-    }
-})
+con.connect(function (err) {
+    if (err) throw err;
+    console.log("Connected!!!")
+});
+
+// let db;
+
+// MongoClient.connect(url, function (err, client) {
+//     if (err) {
+//         console.log('Khong the ket noi toi mongoDB server. Loi la', err)
+//     } else {
+//         console.log('da ket noi duoc', url);
+//         db = client.db("DBQuanLyCay");
+//     }
+// })
 
 // let plant = [{
 //     "plantImg": "https://mrhoa.com/wp-content/uploads/2018/09/cay-kim-tien-phong-thuy.jpg",
@@ -46,71 +59,71 @@ app.listen(3000, function () {
 })
 
 //app.get là lấy dữ liệu từ sever mỗi khi user send req
-app.get("/index", function (req, res) {
-    let plantList = db.collection("QuanLyCay").find().toArray().then(result => { //database sẽ được trả về biến result và đc in ra console
-        console.log(result);
-        res.render("index.ejs", { result });
-    }).catch(error => {
-        console.error(error); //in lỗi ra màn hình console
-    })
-    // res.render("index.ejs", { result: plant }); // res. là syntax trả dữ liệu
-})
+// app.get("/index", function (req, res) {
+//     let plantList = db.collection("QuanLyCay").find().toArray().then(result => { //database sẽ được trả về biến result và đc in ra console
+//         console.log(result);
+//         res.render("index.ejs", { result });
+//     }).catch(error => {
+//         console.error(error); //in lỗi ra màn hình console
+//     })
+//     // res.render("index.ejs", { result: plant }); // res. là syntax trả dữ liệu
+// })
 
 app.use(express.static(__dirname));
 
-//Thêm đối tượng
-app.post("/newPlant", function (req, res) {
-    console.log("da nhan req them obj", req.body)
-    // let newPlantImg = req.body.plantImg;
-    // let newPlantName = req.body.plantName;
-    // let newPlant = { plantImg: newPlantImg, plantName: newPlantName };
-    // plant.push(newPlant);
-    db.collection("QuanLyCay").insertOne(req.body).then(result => { //database sẽ được trả về biến result và đc in ra console
-        console.log(result);
-    }).catch(error => {
-        console.error(error); //in lỗi ra màn hình console
-    })
-    res.redirect("/index");
-})
+// //Thêm đối tượng
+// app.post("/newPlant", function (req, res) {
+//     console.log("da nhan req them obj", req.body)
+//     // let newPlantImg = req.body.plantImg;
+//     // let newPlantName = req.body.plantName;
+//     // let newPlant = { plantImg: newPlantImg, plantName: newPlantName };
+//     // plant.push(newPlant);
+//     db.collection("QuanLyCay").insertOne(req.body).then(result => { //database sẽ được trả về biến result và đc in ra console
+//         console.log(result);
+//     }).catch(error => {
+//         console.error(error); //in lỗi ra màn hình console
+//     })
+//     res.redirect("/index");
+// })
 
-app.get('/index/:plantId', function (req, res) {
-    let id = req.params['plantId'];
-    let objId = require('mongodb').ObjectID
-    db.collection("QuanLyCay").findOne({ _id: new mongodb.ObjectID(id) }).then(result => { //database sẽ được trả về biến result và đc in ra console
-        console.log(result);
-        res.render("plant.ejs", { plant: result })
-    }).catch(error => {
-        console.error(error); //in lỗi ra màn hình console
-    })
-    // res.send('id của plant là' + id);
-})
+// app.get('/index/:plantId', function (req, res) {
+//     let id = req.params['plantId'];
+//     let objId = require('mongodb').ObjectID
+//     db.collection("QuanLyCay").findOne({ _id: new mongodb.ObjectID(id) }).then(result => { //database sẽ được trả về biến result và đc in ra console
+//         console.log(result);
+//         res.render("plant.ejs", { plant: result })
+//     }).catch(error => {
+//         console.error(error); //in lỗi ra màn hình console
+//     })
+//     // res.send('id của plant là' + id);
+// })
 
-app.post("/updatePlant", function (req, res) {
-    console.log("da nhan req update", req.body)
-    let objId = require('mongodb').ObjectID
-    db.collection("QuanLyCay").findOneAndUpdate(
-        { _id: new objId(req.body._id) },
-        { $set: { plantImg: req.body.plantImg, plantName: req.body.plantName } },
-    ).then(result => { //database sẽ được trả về biến result và đc in ra console
-        console.log(result);
-    }).catch(error => {
-        console.error(error); //in lỗi ra màn hình console
-    })
-    res.redirect("/index");
-})
+// app.post("/updatePlant", function (req, res) {
+//     console.log("da nhan req update", req.body)
+//     let objId = require('mongodb').ObjectID
+//     db.collection("QuanLyCay").findOneAndUpdate(
+//         { _id: new objId(req.body._id) },
+//         { $set: { plantImg: req.body.plantImg, plantName: req.body.plantName } },
+//     ).then(result => { //database sẽ được trả về biến result và đc in ra console
+//         console.log(result);
+//     }).catch(error => {
+//         console.error(error); //in lỗi ra màn hình console
+//     })
+//     res.redirect("/index");
+// })
 
-app.post("/deletePlant", function (req, res) {
-    console.log("da nhan req delete", req.body)
-    let objId = require('mongodb').ObjectID
-    db.collection("QuanLyCay").deleteOne(
-        { _id: new objId(req.body._id) },
-    ).then(result => { //database sẽ được trả về biến result và đc in ra console
-        console.log(result);
-    }).catch(error => {
-        console.error(error); //in lỗi ra màn hình console
-    })
-    res.redirect("/index");
-})
+// app.post("/deletePlant", function (req, res) {
+//     console.log("da nhan req delete", req.body)
+//     let objId = require('mongodb').ObjectID
+//     db.collection("QuanLyCay").deleteOne(
+//         { _id: new objId(req.body._id) },
+//     ).then(result => { //database sẽ được trả về biến result và đc in ra console
+//         console.log(result);
+//     }).catch(error => {
+//         console.error(error); //in lỗi ra màn hình console
+//     })
+//     res.redirect("/index");
+// })
 
 // //Xoá đối tượng
 // app.post("/removePlant", function (req, res) { //req là biến để lưu thông tin user gửi lên
@@ -144,3 +157,9 @@ app.post("/deletePlant", function (req, res) {
 //     res.redirect("/index");
 // })
 
+con.query('SELECT * FROM plant', (err, rows) => {
+    if (err) throw err;
+
+    console.log('Data received from Db:');
+    console.log(rows);
+});
