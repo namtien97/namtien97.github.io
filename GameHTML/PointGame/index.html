@@ -9,9 +9,14 @@
 </head>
 
 <body>
-    <button type="button" id="startBtn" onclick="initialize()">Bat dau</button>
-    <button type="button" id="replayBtn" onclick="initialize()">Choi lai</button>
-    <button type="button" id="exitBtn" onclick="exitGame()">Thoat</button>
+    <div id="startGame" style="width: 1000px; height: 700px;">
+        <button type="button" id="startBtn" onclick="init()">Bat dau</button>
+    </div>
+    <div id="endGame" style="width: 1000px; height: 700px;">
+        <button type="button" id="replayBtn" onclick="init()">Choi lai</button>
+        <button type="button" id="exitBtn">Thoat</button>
+    </div>
+
     <div id="main">
         <canvas id="canvas" width="1000px" height="700px"></canvas>
     </div>
@@ -20,21 +25,33 @@
 
 <script>
 
-    var startBtn = document.getElementById('startBtn')
+    var startBtn = document.getElementById('startBtn');
+    var replayBtn = document.getElementById("replayBtn");
+    var exitBtn = document.getElementById('exitBtn');
 
-    var c = document.querySelector('canvas');
+    var canvas = document.querySelector('canvas');
     var c = canvas.getContext('2d');
 
+    let startGame = document.getElementById('startGame');
+    let endGame = document.getElementById('endGame');
+    let main = document.getElementById('main');
 
+    // Vào màn hình chơi game
+    startBtn.addEventListener('click', function () {
+        startGame.style.display = 'none'
+        main.style.display = 'block'
+    })
 
-    function initialize() {
+    //Choi lai
+    replayBtn.addEventListener('click', function () {
+        startGame.style.display = 'none';
+        endGame.style.display = 'none';
+        main.style.display = 'block';
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        animate();
+    })
 
-        startBtn.style.display = 'none';
-        replayBtn.style.display = 'none';
-        exitBtn.style.display = 'none';
-        console.log(exitBtn.style.display, 'exit1');
-        console.log(startBtn.style.display, 'start1');
-        console.log(replayBtn.style.display, 'replay1');
+    function init() {
         class Ball {
             constructor(x, y, radius, startAngle, endAngle, color) {
                 this.x = x;
@@ -44,7 +61,7 @@
                 this.endAngle = endAngle;
                 this.color = color;
                 this.point = 0;
-                this.dx = 1;
+                this.dx = 5;
                 this.dy = 0;
             }
 
@@ -85,24 +102,24 @@
 
             move() {
                 if (this.x === canvas.width) {
-                    this.dx = -1;
+                    this.dx = -5;
                 } else if (this.x === this.radius) {
-                    this.dx = 1;
+                    this.dx = 5;
                 } else if (this.y === this.radius) {
-                    this.dy = 1;
+                    this.dy = 5;
                 } else if (this.y === canvas.height) {
-                    this.dy = -1;
+                    this.dy = -5;
                 }
 
                 addEventListener('keydown', (event) => {
                     if (event.keyCode === 87) {
-                        this.dy = -1;
+                        this.dy = -5;
                     } else if (event.keyCode === 65) {
-                        this.dx = - 1;
+                        this.dx = - 5;
                     } else if (event.keyCode === 68) {
-                        this.dx = 1;
+                        this.dx = 5;
                     } else if (event.keyCode === 83) {
-                        this.dy = 1;
+                        this.dy = 5;
                     }
                     let n = arrayPoint.length;
                     while (n--) {
@@ -118,19 +135,12 @@
                 this.x = this.x + this.dx;
                 this.drawBoss();
 
-                if (arrayPoint.length === 0) {
-                    c.clearRect(0, 0, canvas.width, canvas.height)
-                    replayBtn.style.display = 'inline';
-                    exitBtn.style.display = 'inline';
-                    console.log(exitBtn.style.display, 'exit2');
-                    console.log(startBtn.style.display, 'start2');
-                    console.log(replayBtn.style.display, 'replay2');
-                }
+
             }
         }
 
         arrayPoint = [];
-        let n = 100;
+        let n = 2;
 
         for (let i = 0; i < n; i++) {
 
@@ -142,6 +152,8 @@
 
         let ball = new Ball(100, 100 * 0.5, 30, 0, Math.PI * 2, '#FFFF52')
 
+        // Giả lập thời gian chơi game là 5s từ khi load trang, sau đó chuyển sang màn hình end game
+
         function animate() {
             c.clearRect(0, 0, canvas.width, canvas.height)
             for (let i = 0; i < arrayPoint.length; i++) {
@@ -150,26 +162,27 @@
             ball.drawBoss();
             ball.drawPoint();
             ball.move();
-            requestAnimationFrame(animate)
-            //game over
+            requestAnimationFrame(animate);
+            if (arrayPoint.length === 0) {
+                main.style.display = 'none';
+                endGame.style.display = 'block';
+            };
 
-
-        }
-
+        };
         animate();
 
-        function exitGame() {
-            startBtn.style.display = 'inline';
-            replayBtn.style.display = 'none';
-            exitBtn.style.display = 'none';
-            console.log(exitBtn.style.display, 'exit3');
-            console.log(startBtn.style.display, 'start3');
-            console.log(replayBtn.style.display, 'replay3');
-        }
 
-        function randomPosition(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        }
+    }
+
+    // Trở về màn hình start game
+    exitBtn.addEventListener('click', function () {
+        window.location.reload()
+    });
+
+
+
+    function randomPosition(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
 
