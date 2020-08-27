@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ==========================DATE===============================
+
+        // Bài 1: Viết một hàm JavaScript để lấy ngày hiện tại
+        // Lưu ý: Truyền dấu phân tách làm đối số.
+        // getCurrentDate("/") => 17/08/2020
+
+        // function getCurrentDate(str) {
+        //     let d = new Date();
+        //     let currentDate = d.getDate() + str + d.getMonth() + str + d.getFullYear();
+        //     console.log(currentDate);
+        // }
+        // getCurrentDate("/")
+
+        // Bài 2: Viết một hàm JavaScript để lấy số ngày trong tháng
+        // getDaysInMonth(8, 2020) => 31
+
+        // function getDaysInMonth(month, year) {
+        //     let d1 = new Date(year, month, 1);
+        //     let d2 = new Date(year, month - 1, 1);
+        //     let d3 = (d1 - d2) / 86400000; //1day===86400000milliseconds
+        //     console.log(d3);
+        // }
+        // getDaysInMonth(8, 2020);
+
+
+        // Bài 3: Viết một hàm JavaScript để kiểm tra xem một ngày có phải là ngày cuối tuần hay không.
+
+        // function checkWeekend() {
+        //     let d = new Date();
+        //     if (d.getDay() === 0 || d.getDay() === 6) {
+        //         console.log('Now is weekend');
+        //     } else {
+        //         console.log('Sr, it isn\'t weekend');
+        //     }
+        // }
+        // checkWeekend();
+
+        // Bài 4: Viết một hàm JavaScript để kiểm tra xem một `input` có phải là một đối tượng ngày tháng hay không
+
+        // function checkTimeObj() {
+        //     let d = new Date();
+        //     console.log(d instanceof Date);
+        // }
+
+        // checkTimeObj();
+
+
+        // Bài 5: Viết một hàm JavaScript sẽ trả về số phút theo giờ và phút
+
+        // function sumMinute(hour, minute) {
+        //     console.log(hour * 60 + minute);
+        // }
+
+        // sumMinute(1, 30)
+
+        // Bài 6: Viết một hàm JavaScript để đếm số ngày đã trôi qua kể từ đầu năm.
+
+        // function sumMinuteOfCurrentYear() {
+        //     let d = new Date(2020, 1, 1);
+        //     let now = new Date()
+        //     let result = Math.ceil((now.getTime() - d.getTime()) / 86400000);
+        //     console.log(result);
+        // }
+
+        // sumMinuteOfCurrentYear();
+
+        // Bài 7: Viết chương trình JavaScript để tính tuổi.
+        // console.log(calculate_age(new Date(1982, 11, 4)));
+
+        // function calculate_age() {
+        //     let d = new Date(1997, 11, 4);
+        //     let now = new Date();
+        //     let result = now.getFullYear() - d.getFullYear();
+        //     console.log(result);
+        // }
+
+        // calculate_age();
+
+        // Bài 8: Viết hàm JavaScript để nhận chênh lệch thời gian tính bằng phút giữa hai ngày
+
+        // dt1 = new Date("October 13, 2014 11:11:00");
+        // dt2 = new Date("October 13, 2014 11:13:00");
+        // console.log(diff_minutes(dt1, dt2));
+
+        // function diff_minutes(d1, d2) {
+        //     let result = Math.ceil((d2.getTime() - d1.getTime()) / 60000);
+        //     return result;
+        // }
+        // let dt1 = new Date("October 13, 2014 11:11:00");
+        // let dt2 = new Date("October 13, 2014 11:13:00");
+        // console.log(diff_minutes(dt1, dt2));
+
+        // Bài 9: Viết một hàm JavaScript để lấy ngày bắt đầu của tuần.
+        // let dt = new Date();
+        // startOfWeek(dt)
+        // function startOfWeek(date) {
+        //     if (date.getDay() === 0) {
+        //         console.log(date.getDate() - 6);
+        //     } else if (date.getDay() === 1) {
+        //         console.log(date.getDate());
+        //     } else {
+        //         let a = date.getDay() - 1;
+        //         console.log(date.getDate() - a);
+        //     }
+        // }
+
+        // let dt = new Date();
+        // startOfWeek(dt);
+
+        // Bài 10: Viết một hàm JavaScript để lấy ngày kết thúc tháng
+        // dt = new Date();
+        // endOfMonth(dt);
+
+        // function endOfMonth(date) {
+        //     let d1 = new Date();
+        //     d1.setMonth(date.getMonth() - 1);
+        //     let dayOfMonth = (date - d1) / 86400000;
+        //     let d2 = new Date();
+        //     d2.setDate(dayOfMonth);
+        //     console.log(d2.getDay());
+        // }
+
+        // dt = new Date();
+        // endOfMonth(dt);
+
+
+        //=========================ES6==================================
+
+        // Bài 1: Viết chương trình JavaScript để lấy một phần tử ngẫu nhiên từ một mảng
+        // sample([3, 7, 9, 11]) => 3
+        // sample([3, 7, 9, 11]) => 9
+
+        // function randomNumber(arr) {
+        //     return Math.floor(Math.random() * (arr.length - 0)) + 0;
+        // }
+
+        // function sample(arr) {
+        //     let random = randomNumber(arr);
+        //     console.log(arr[random]);
+        // }
+
+        // sample([3, 7, 9, 11]);
+
+        // Bài 2: Viết chương trình đổi chỗ ngẫu nhiên vị trí của các phần tử trong mảng
+        // function randomNumber(arr) {
+        //     return Math.floor(Math.random() * (arr.length - 0)) + 0;
+        // }
+
+        // function randomArr(arr) {
+        //     let a = randomNumber(arr);
+        //     for (let i = 0; i < arr.length; i++) {
+        //         [arr[i], arr[a]] = [arr[a], arr[i]]
+        //     }
+        //     console.log(arr);
+        // }
+        // console.log([3, 7, 9, 11]);
+        // randomArr([3, 7, 9, 11]);
+        // Bài 3: Viết chương trình JavaScript để lấy một mảng các phần tử xuất hiện trong cả hai mảng
+        //similarity([1, 2, 3], [1, 2, 4]) => [1,2]
+
+        // function similarity(a, b) {
+        //     let arr = []
+        //     for (let i = 0; i < a.length; i++) {
+        //         if (b.indexOf(a[i]) !== -1) {
+        //             arr.push(a[i]);
+        //         }
+        //     }
+        //     console.log(arr)
+        // }
+
+        // similarity([1, 2, 3], [1, 2, 4]);
+        // Bài 4: Viết một chương trình JavaScript để lấy sự phần tử không xuất hiện ở cả 2 mảng
+        //symmetricDifference([1, 2, 3], [1, 2, 4]) => [3,4]
+
+
+        // function symmetricDifference(a, b) {
+        //     let arr = []
+        //     for (let i = 0; i < a.length; i++) {
+        //         if (b.indexOf(a[i]) === -1) {
+        //             arr.push(a[i]);
+        //         }
+        //     }
+        //     for (let i = 0; i < b.length; i++) {
+        //         if (a.indexOf(b[i]) === -1) {
+        //             arr.push(b[i]);
+        //         }
+        //     }
+        //     console.log(arr)
+        // }
+
+        // symmetricDifference([1, 2, 3], [1, 2, 4]);
+
+        // Bài 5: Xóa n phần tử khỏi phần cuối của một mảng nhất định
+        // takeRight([1, 2, 3], 2) => [1]
+        // takeRight([1, 2, 3]) => [1, 2, 3]
+
+        // function takeRight(arr, index) {
+        //     arr.splice(-index, index);
+        //     console.log(arr);
+        // }
+        // takeRight([1, 2, 3, 4], 2)
+        // takeRight([1, 2, 3])
+
+        // Bài 6: Viết function lấy tất cả các phần tử không trùng nhau trong cả 2 mảng
+        // union([1, 2, 3], [4, 3, 2]) => [1, 2, 3, 4]
+        // union([1, 2, 3], [1, 2, 3]) => [1, 2, 3]
+
+        // function union(a, b) {
+        //     let arr = b;
+        //     for (let i = 0; i < b.length; i++) {
+        //         if (a.indexOf(b[i]) === -1) {
+        //             arr.push(a[i]);
+        //         }
+        //     }
+        //     console.log(arr);
+        // };
+
+        // union([1, 2, 3], [4, 3, 2]);
+
+        // Bài 7: Viết chương trình JavaScript để tạo mã màu HEX ngẫu nhiên.
+        // random_hex_color_code()
+
+
+
+        // function random_hex_color_code() {
+        //     const hexNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        //     let hexCol = '#';
+        //     for (let i = 0; i < 6; i++) {
+        //         let random = Math.floor(Math.random() * hexNumbers.length);
+        //         hexCol += hexNumbers[random];
+        //     }
+        //     console.log(hexCol);
+        //     hexNumbers = 1;
+        //     return hexCol;
+        // }
+
+        // random_hex_color_code();
+
+        // Bài 8: Viết một chương trình JavaScript trả về một tập hợp con của một chuỗi.
+        //     sub_String("dog") => ["d", "do", "dog", "o", "og", "g"]
+
+        // function sub_String(str) {
+
+        //     let arr = [];
+        //     for (let i = 1; i <= str.length; i++) {
+        //         arr.push(str.slice(0, i));
+        //     }
+        //     arr.push(str.slice(-Math.floor(str.length / 2), Math.floor(str.length / 2)))
+        //     console.log(Math.floor(length / 2 + 1));
+        //     console.log(arr);
+        // }
+
+        // sub_String("dog1");
+
+        //CHUA LAM
+
+        // Bài 9: Viết hàm có 2 tham số, tham số đầu tiên là 1 chuỗi thời gian t dạng ''giờ:phút:giây'', tham số thứ 2 là 1 số x <= 1000.
+        //Kết quả trả về là 1 chuỗi 
+        //biểu thị thời gian sau x giây kể từ thời điểm t. Ví dụ với t = ''9:20:56'' và x = 7 thì kết quả là ''9:21:3''.
+
+        // function time(time, x) {
+        //     arr = time.split(':');
+        //     let d = new Date();
+        //     d.setHours(arr[0]);
+        //     d.setMinutes(arr[1]);
+        //     d.setSeconds(arr[2]);
+        //     let dNew = new Date(d.getTime() + 7 * 1000);
+        //     console.log(dNew);
+        // }
+
+        // let t = '9: 20: 56';
+        // let x = 7;
+        // time(t, x);
+
+        // Bài 10: Cho 1 số nguyên, hãy viết hàm sắp xếp lại các chữ số trong số nguyên đó sao cho ra 1 số nhỏ nhất
+        //có thể (không tính số 0 đầu tiên). 
+        //Ví dụ với tham số 53751 thì kết quả là 13557.
+
+        // console.log([...'59251'].sort().join(''));
+
+        // Bài 11: Kiểm tra 1 chuỗi có phải là chuỗi viết hoa hay không?
+        // function check(str) {
+        //     let test = str.toUpperCase()
+        //     if (str === test) {
+        //         console.log(true);
+        //     } else {
+        //         console.log(false);
+        //     }
+        // }
+        // let str = 'HAHH'
+        // let st = 'haHH'
+        // check(str);
+        // check(st);
+
+        // Bài 12: Kiểm tra mảng xem có phải mảng tăng dần hay không
+
+        // function check(arr) {
+        //     let flag = true;
+        //     for (let i = 0; i < arr.length - 1; i++) {
+        //         if (arr[i] > arr[i + 1]) {
+        //             flag = false;
+        //             break;
+        //         }
+        //     }
+        //     console.log(flag);
+        //     return flag;
+        // }
+        // let arr = [1, 2, 3, 9, 4];
+        // let arr2 = [1, 2, 6, 4, 3];
+
+        // check(arr);
+        // check(arr2);
+
+        // Bài 13 Kiểm tra mảng xem có phải mảng sô lẻ giảm dần hay không
+
+        // function check(arr) {
+        //     let flag = true;
+        //     for (let i = 0; i < arr.length - 1; i++) {
+        //         if (arr[i] < arr[i + 1] || arr[i] % 2 === 0 || arr[i + 1] % 2 === 0) {
+        //             flag = false;
+        //             break;
+        //         }
+        //     }
+
+        //     console.log(flag);
+        //     return flag;
+        // }
+        // let arr = [1, 2, 3, 9, 4];
+        // let arr2 = [9, 7, 5, 1];
+
+        // check(arr);
+        // check(arr2);
+
+        // Bài 14 Viết hàm đếm ngược thời gian đến tết dương lịch
+
+        // function count() {
+        //     let d = new Date();
+        //     let tet = new Date();
+        //     tet.setDate(1);
+        //     tet.setMonth(1);
+        //     tet.setFullYear(d.getFullYear() + 1);
+        //     let a = (tet.getTime() - d.getTime()) / 86400000;
+        //     return a;
+        // }
+        // count();
+
+    </script>
+</body>
+
+</html>
