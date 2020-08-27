@@ -12,23 +12,27 @@ let interval;
 function timer() {
     if (s < 60) {
         s++;
+        s = (s < 10) ? "0" + s : s;
         seconds.innerHTML = s;
     }
     if (s >= 60) {
-        s = '00';
+        s = 0;
         m++;
+        m = (m < 10) ? "0" + m : m;
         minutes.innerHTML = m;
     }
     if (m >= 60) {
-        m = '00';
+        m = 0;
         minutes.innerHTML = m;
         h++;
+        h = (h < 10) ? "0" + h : h;
         hour.innerHTML = h;
     }
     if (h >= 24) {
-        h = '00';
+        h = 0;
         hour.innerHTML = h;
     }
+
 }
 
 interval = setInterval(timer, 1000)
