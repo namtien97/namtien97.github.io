@@ -5,7 +5,6 @@ let button_stop = document.getElementById("button_stop");
 let button_reset = document.getElementById("button_reset");
 let interval;
 
-console.log(typeof(interval));
 let second = 00;
 let millisecond = 00;
 
