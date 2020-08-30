@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
 
     const grid = document.querySelector('.grid')//gan bien grid theo class = "grid" ben html
     const resultDisplay = document.querySelector('#result')//gan bien resultDisplay theo id = "result" ben html
-    var cardsChosen = [] 
+    var cardsChosen = []
     var cardsChosenId = []
     const cardsWon = [] //kieu khai bao let se thay doi duoc gia tri con khai bao const thi khong thay doi duoc gia tri
     //tao ra bang
@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
         for (let i = 0; i < cardArray.length; i++) { //dung .length de co the dem so phan tu trong mang
             var card = document.createElement('img') //tao element 'img' gan voi bien card
             card.setAttribute('src', 'image/blank.png') //card.setAttribute se gan src vao 'img' voi 2 gia tri la src va image/blank.png
-            card.setAttribute('data-id', i) 
-            card.addEventListener('click', flipcard) 
+            card.setAttribute('data-id', i) //them attribute la data-id voi gia tri theo bien i
+            card.addEventListener('click', flipcard) //gan click voi function flipcard
             grid.appendChild(card) //them card thanh con cua grid
         }
     }
@@ -77,16 +77,16 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
         if (optionOneId == optionTwoId) { //click cùng 1 tấm sẽ hiện ra trường hợp này
             cards[optionOneId].setAttribute('src', 'image/blank.png') //ẩn lại hình ảnh bằng cách setAtribute lại
             cards[optionTwoId].setAttribute('src', 'image/blank.png')
-            alert('You have clicked the same image!') 
+            alert('You have clicked the same image!')
         } else if (cardsChosen[0] === cardsChosen[1]) {// nếu id giống nhau thì sẽ đúng
             alert('You found a match')
             cards[optionOneId].setAttribute('src', 'image/white.png') //hiện lên màn hình người dùng hình trắng
             cards[optionTwoId].setAttribute('src', 'image/white.png')
-            cards[optionOneId].removeEventListener('click', flipcard)
+            cards[optionOneId].removeEventListener('click', flipcard)//de khong bam lai duoc nua
             cards[optionTwoId].removeEventListener('click', flipcard)
             cardsWon.push(cardsChosen) //thêm vào mảng cardsChosen để tí nữa xét xem đã tìm hết hình chưa
         } else {
-            cards[optionOneId].setAttribute('src', 'image/blank.png') 
+            cards[optionOneId].setAttribute('src', 'image/blank.png')
             cards[optionTwoId].setAttribute('src', 'image/blank.png')
             alert('Sorry, try again')
         }
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
         var cardId = this.getAttribute('data-id') //gắn data-id vào biến cardId
         cardsChosen.push(cardArray[cardId].name) //thêm phần tử .name từ cardArray
         cardsChosenId.push(cardId) //thêm phần tử cardId vào cardsChosenId
-        this.setAttribute('src', cardArray[cardId].img) 
+        this.setAttribute('src', cardArray[cardId].img)//chuyen hinh trang sau hinh trong cardArray
         if (cardsChosen.length === 2) {
             setTimeout(checkForMatch, 500) //nếu mảng cardsChosen có độ dài bằng 2 sẽ chạy vể function checkForMatch để kiếm tra
         }
