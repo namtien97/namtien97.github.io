@@ -9,7 +9,46 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
             name: 'fries',
             img: 'image/fries.png'
         },
-
+        {
+            name: 'cheeseburger',
+            img: 'image/cheeseburger.png'
+        },
+        {
+            name: 'cheeseburger',
+            img: 'image/cheeseburger.png'
+        },
+        {
+            name: 'hotdog',
+            img: 'image/hotdog.png'
+        },
+        {
+            name: 'hotdog',
+            img: 'image/hotdog.png'
+        },
+        {
+            name: 'ice-cream',
+            img: 'image/ice-cream.png'
+        },
+        {
+            name: 'ice-cream',
+            img: 'image/ice-cream.png'
+        },
+        {
+            name: 'milkshake',
+            img: 'image/milkshake.png'
+        },
+        {
+            name: 'milkshake',
+            img: 'image/milkshake.png'
+        },
+        {
+            name: 'pizza',
+            img: 'image/pizza.png'
+        },
+        {
+            name: 'pizza',
+            img: 'image/pizza.png'
+        }
     ]
     const grid = document.querySelector('.grid')//gan bien grid theo class = "grid" ben html
     const resultDisplay = document.querySelector('#result')//gan bien resultDisplay theo id = "result" ben html
@@ -85,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
 
     }
     let playBtn = document.getElementById('button_play')
-    let time = 10;
+    let time = 60;
     let gameover = document.getElementById("gameover")
     let win = document.getElementById("win")
     function countTime() {
@@ -98,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
             audio.pause();
             loseAudio.play();
         }
-        console.log(time);
         timeDisplay.innerHTML = time;
     }
     let interval;
@@ -106,14 +144,14 @@ document.addEventListener('DOMContentLoaded', () => { //ArrowFunction
         interval = setInterval(countTime, 1000);
         document.getElementById('body-1').style.display = "flex";
         document.getElementById('container_grid').style.display = "flex";
-        playBtn.disabled = false;
+        playBtn.disabled = true;
     }
     function removeBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             let img = document.getElementById('remove' + i)
             grid.removeChild(img);
         }
-        time = 10;
+        time = 60;
         cardsWon = []
         resultDisplay.innerHTML = 0;
     }
