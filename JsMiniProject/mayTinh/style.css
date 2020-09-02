@@ -40,4 +40,34 @@
   top: 0px;
   width: 53px;
   height: 118px;
+  background-color: blue;
+  color: white;
+}
+
+#button_equal:focus {
+  outline: none;
+}
+
+.hang2 button {
+  background-color: white;
+}
+
+.hang2 button:focus {
+  outline: none;
+}
+
+#cong:disabled {
+  opacity: 0.5;
+}
+#tru:disabled {
+  opacity: 0.5;
+}
+#nhan:disabled {
+  opacity: 0.5;
+}
+#chia:disabled {
+  opacity: 0.5;
+}
+#button_dot:disabled {
+  opacity: 0.5;
 }
