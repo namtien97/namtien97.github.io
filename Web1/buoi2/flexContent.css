@@ -1,0 +1,9 @@
+
+.flexContent{
+    display: flex;
+    justify-content: center;
+}
+
+.sizeWord{
+    width: 700px;
+}

@@ -1,0 +1,13 @@
+#clock {
+  display: flex;
+  margin: 300px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #17d4fe;
+  font-size: 9rem;
+  font-family: 'Russo One', sans-serif;
+}

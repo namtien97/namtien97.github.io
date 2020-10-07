@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let c = canvas.getContext('2d');
+
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+        addEventListener("resize", () => {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+        });
+
+        class Square {
+            constructor(centerx, centery, width, color, rotate) {
+                square.centerx = centerx;
+                square.centery = centery;
+                square.rect_width = width;
+                square.color = color;
+                square.rotate = rotate
+            }
+            draw() {
+                let rect_width = 200;
+                c.fillStyle = square.color;
+
+                if (!this.rotate) {
+                    c.fillRect(square.centerx - square.rect_width / 2, square.centery - square.rect_width / 2, square.rect_width, square.rect_width);
+                } else {
+                    c.save();
+                    c.translate(square.centerx, square.centery);
+                    c.rotate(Math.PI / 4);
+                    c.fillRect(- square.rect_width / 2, - square.rect_width / 2, square.rect_width, square.rect_width);
+                    c.restore();
+                }
+            }
+        }
+
+        let centerx = canvas.width / 2;
+        let centery = canvas.height / 2;
+
+        var square = new Square(1);
+        square[0] =
+            (centerx, centery, 400, '#4472C4', false);
+        square[1] =
+            (centerx, centery, 400 / 1.414, 'white', true);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            c.clearRect(0, 0, canvas.width, canvas.height);
+            for (var i = 0; i < 2; i++) {
+                square[i].draw();
+            }
+        }
+
+        animate();
+
+    </script>
+</body>
+
+</html>

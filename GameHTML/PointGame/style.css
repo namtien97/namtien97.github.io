@@ -1,0 +1,49 @@
+#canvas {
+  background-color: black;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startBtn {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+}
+
+#replayBtn {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  display: block;
+  left: 410px;
+  top: 277px;
+}
+
+#exitBtn {
+  position: absolute;
+  margin-top: 70px;
+  width: 100px;
+  height: 50px;
+  display: block;
+  left: 410px;
+  top: 270px;
+}
+#startGame {
+  display: block;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#endGame {
+  display: none;
+  background-color: orchid;
+}
+#main {
+  display: none;
+}

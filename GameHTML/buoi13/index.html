@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false
+        // - Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra
+
+        // Ví dụ: checkStringExist("i love you", "you") => true
+
+        // checkStringExist("i love you", "hate") => false
+
+        //Bai lam
+
+        // function checkStringExist(str, cstr) {
+        //     var arr1 = str.split(' ');
+        //     var arr2 = cstr.split(' ');
+        //     let n1 = arr1.length;
+        //     let n2 = arr2.length;
+        //     for (let j = 0; j < n1; j++) {
+        //         for (let i = 0; i < n2; i++) {
+        //             if (arr1[i] == arr2[j]) {
+        //                 console.log(true);
+        //             } else {
+        //                 console.log(false);
+        //             }
+        //         }
+        //     }
+        // };
+        // let str = 'i love you';
+        // let cstr = 'yu love';
+        // checkStringExist(str, cstr);
+
+        // Bài 2. Viết hàm rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. 
+        // Ví dụ: shortenString('Xin chào các bạn') => Kết quả trả về là 'Xin chào...'
+
+        //Bai lam
+
+        // function shortenString(str) {
+        //     console.log(str.slice(0, 8) + '...')
+        // };
+
+        // let str = 'Xin chao cac ban'
+        // shortenString(str);
+
+        // Bài 3. Viết hàm có tác dụng biến 1 chuỗi thành chỉ viết hoa từ đầu tiên.
+        // Ví dụ: capitalizeString('chÀo MừnG đẾn với techMaster') => Kết quả trả về là 'Chào Mừng Đến Với Techmaster'
+
+        //Bai lam
+
+        // function capitalizeString(str) {
+        //     let n = str.toLowerCase();
+        //     console.log(n.slice(0, 1).toUpperCase() + n.slice(1));
+        // }
+        // str = 'chÀo MừnG đẾn với techMaster'
+        // capitalizeString(str);
+
+        // Bài 4. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần.
+
+        //Bai lam
+
+        // function copy(str) {
+        //     let n = [];
+        //     for (let i = 0; i < 10; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.toString());
+        // }
+        // let str = 'copy 10 lan';
+        // copy(str);
+
+        // Bài 5. Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
+        // Ví dụ: repeatString('a') => Kết quả trả về là 'a-a-a-a-a-a-a-a-a-a'
+
+        //Bai lam
+
+        // function copy(str) {
+        //     let n = [];
+        //     for (let i = 0; i < 10; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.join('-'));
+        // }
+        // let str = 'a';
+        // copy(str);
+
+
+        // Bài 6. Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+        // Ví dụ: repeatString('a', 5) => Kết quả trả về là 'a-a-a-a-a'
+
+        // function copy(str,soLan) {
+        //     let n = [];
+        //     for (let i = 0; i < soLan; i++) {
+        //         n[i] = str;
+        //     }
+        //     console.log(n.join('-'));
+        // }
+        // let str = 'a';
+        // let soLan = 5;
+        // copy(str,soLan);
+
+        // Bài 7. Viết hàm đảo ngược chuỗi.Viết function với đầu vào là 1 chuỗi string.Trả về chuỗi đảo ngược của chuỗi đó
+        // Ví dụ: reverseString('Hello') => Kết quả trả về là 'olleH'
+
+        // let reverseString = (str) => {
+        //     let arr = str.split('');
+        //     let arr1 = [];
+
+        //     for (let i = arr.length - 1; i >= 0; i--) {
+        //         arr1.push(arr[i])
+        //     }
+
+        //     console.log(arr1.join(''));
+        // }
+        // let str = 'Hello'
+        // reverseString(str);
+
+        // Bài 8. Cho 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không(đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc
+
+        // false.Ví dụ ''Race car'' trả về true, ''hello world'' trả về false.
+
+        // function check(str) {
+        //     let check = true;
+        //     let x = str.toLowerCase()
+        //     let m = x.replace(/\s+/g, '');
+        //     let n = m.split('');
+        //     let a = n.reverse();
+        //     for (let j = n.length; j >= 0; j--) {
+        //         for (let i = 0; i < a.length; i++) {
+        //             j--;
+        //             if (j < 0) {
+        //                 break;
+        //             }
+        //             if (a[i] !== n[j]) {
+        //                 check = false;
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     console.log(check);
+        // }
+
+        // let str = 'Race car';
+        // let str2 = 'hello world';
+
+        // check(str);
+
+        // Bài tập phần Array
+
+        // Bài 1. Viết hàm tìm ra số nhỏ nhất trong mảng các số.Ví dụ:
+        // minNumbers([2, 1, 3]) => Kết quả trả về là 1
+
+        // function minNumbers(arr) {
+        //     let min = Math.min.apply(Math, arr);
+        //     console.log(min);
+        // }
+        // let arr = [2, - 4, 1]
+        // minNumbers(arr);
+
+
+        // Bài 2. Viết hàm tìm ra số lớn thứ nhì trong mảng các số.Ví dụ:
+        // max2Numbers([2, 1, 3, 4]) => Kết quả trả về là 3
+
+        // function max2Numbers(arr) {
+        //     let max = Math.max.apply(Math, arr);
+        //     let a = arr.indexOf(max);
+        //     let b = arr.splice(a, 1);
+        //     let max2 = Math.max.apply(Math, arr)
+        //     console.log(max2);
+        // }
+        // let arr = [2, 8, 3, 9];
+        // max2Numbers(arr);
+
+        // Bài 3. Viết hàm truyền vào 1 mảng tên học viên, sắp xếp lại mảng này theo chiều ngược của bảng chữ cái.Ví dụ:
+        // sortStudents(['Nam', 'Hoa', 'Tuấn']) => Kết quả trả về là['Tuấn', 'Nam', 'Hoa']
+
+        // function sortStudents(arr) {
+        //     let a = arr.sort();
+        //     console.log(a.reverse());
+        // }
+        // let arr = ['Nam', 'Hoa', 'Tuấn']
+        // sortStudents(arr2);
+
+
+        // Bài 4. Tính tổng các số chia hết cho 5 từ 0 -> 100
+
+        // function sum() {
+        //     let a = 0;
+        //     for (let i = 0; i <= 100; i++) {
+        //         if (i % 5 === 0) {
+        //             a = a + i;
+        //         }
+        //     }
+        //     console.log(a);
+        // }
+        // sum();
+
+        // Bài 5. Viết hàm cho phép truyền vào 1 mảng các số, kết quả trả về là 1 mảng mới với các số là số dư tương ứng khi chia mảng cũ cho 2
+
+        // function division(arr) {
+        //     arr2 = [];
+        //     for (let i = 0; i < arr.length; i++) {
+        //         arr2.push(arr[i] % 2)
+        //     }
+        //     console.log(arr2);
+        // }
+
+        // arr = [2, 5, 9];
+        // division(arr);
+
+        // Bài 6. Cho 1 mảng các chuỗi.Viết hàm lọc ra các phần tử có độ dài lớn nhất.Ví dụ với tham số
+
+        // [''aba'', ''aa'', ''ad'', ''c'', ''vcd'']thì kết quả trả về[''aba'', ''vcd''].
+
+        function maxStr(arr) {
+            let a = [];
+            for (let i = 0; i < arr.length; i++) {
+                a.push(arr[i].length);
+            }
+            let max = Math.max.apply(Math, a)
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].length === max) {
+                    console.log(arr[i]);
+                }
+            }
+        }
+        arr = ['aba', 'aa', 'ad', 'c', 'vcd'];
+
+        maxStr(arr);
+
+    </script>
+</body>
+
+</html>

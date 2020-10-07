@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <p class="title">Memory Game</p>
+    <div class="body-1" id="body-1">
+        <div class="timeAndScore">
+            <p>Time: <span id=time>60</span></p>
+            <p>Score: <span id="result">0</span></p>
+            <!-- In diem ra man hinh -->
+        </div>
+    </div>
+    <div id="gameover">Game Over</div>
+    <div id="win">You are winner!</div>
+    </audio>
+    <div id="container_grid">
+        <div class="grid"></div>
+    </div>
+    <button id="button_play" class="button_play">Play game</button>
+    <audio loop src="audio\CityBlocks-TrackTribe.mp3" type="audio/mp3" id="audio"></audio>
+    <audio loop src=".\audio\bensound-jazzcomedy.mp3" type="audio/mp3" id="winAudio"></audio>
+    <audio loop src="audio\bensound-ofeliasdream.mp3" type="audio/mp3" id="loseAudio"></audio>
+</body>
+
+</html>

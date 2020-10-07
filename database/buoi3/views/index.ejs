@@ -1,0 +1,54 @@
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/doodle/48/000000/potted-plant--v1.png" />
+    <link rel="stylesheet" href="views/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__title">
+            <span>
+                Cây cảnh trong nhà
+            </span>
+        </div>
+    </div>
+
+
+    
+    <form action="/plantDetail" method="POST" class="searchButton">
+        <input type="text" name="plantName" placeholder="Nhap ten cay de tim kiem">
+        <button type="submit">Tim kiem</button>
+    </form>
+
+    <form action="/newPlant" method="POST" class="nutThem">
+        <input type="text" name="idplant" placeholder="Nhap id plant" />
+        <input type="text" name="plantImg" placeholder="Nhap link anh" />
+        <input type="text" name="plantName" placeholder="Nhap ten cay" />
+        <button type="submit">Tao plant</button>
+    </form>
+
+    <div class="content__container">
+        <% plants.forEach((plants,index) => { %>
+        <div class="content__detail">
+            <div class="content__detail__img">
+                <img src="<%= plants.plantImg %>" alt="">
+            </div>
+            <div class="content__detail__title">
+                <span><%= plants.plantName %></span>
+            </div>
+            <a href="/index/<%=plants.idplant %>"><button>Xem chi tiết</button>
+            </a>
+        </div>
+        <%});%>
+    </div>
+</body>
+
+</html>

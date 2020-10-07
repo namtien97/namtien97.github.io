@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black;">
+
+    <script>
+        /////////////Xử lý số/////////////
+
+        // Bài 1: Viết hàm tính thể tích hình cầu, với tham số truyền vào là bán kính của hình cầu.
+
+        // function volume(r) {
+        //     let a = ((4 / 3) * (Math.PI) * (Math.pow(r, 3)));
+        //     console.log(a);
+        // }
+
+        // let r = 10;
+        // volume(r)
+
+        // Bài 2: Viết hàm truyền vào 2 số nguyên, tính tổng tất cả các số nguyên nằm giữa chúng.Ví dụ với
+        // tham số 3 và 8 ta có kết quả là 22(bằng 4 + 5 + 6 + 7).
+
+        // function sum(a, b) {
+        //     let sum = 0;
+        //     for (let i = a + 1; i < b; i++) {
+        //         sum = sum + i;
+        //     }
+        //     console.log(sum);
+        // }
+        // let a = 3;
+        // let b = 8;
+        // sum(a, b);
+
+
+        // Bài 3: Cho 1 số, kiểm tra xem số đó có phải là số nguyên tố hay không, kết quả trả về true hoặc false. 
+
+        // function kiem_tra_snt(n) {
+        //     var flag = true;
+        //     if (n < 2) {
+        //         flag = false;
+        //     }
+        //     for (var i = 2; i <= Math.sqrt(n); i++) {
+        //         if (n % i == 0 && n != i) {
+        //             flag = false;
+        //             break;
+        //         }
+        //     }
+        //     console.log(flag);
+        // }
+        // let a = 9;
+        // kiem_tra_snt(a);
+
+
+        // Bài 4: Cho 1 số nguyên dương bất kỳ.Tính tổng tất cả các số nguyên tố mà nhỏ hơn hoặc bằng tham
+        // số truyền vào.
+
+        // function sum_snt(a) {
+        //     let sum = 0;
+        //     for (let i = 2; i <= a; i++) {
+        //         if (kiem_tra_snt(i) !== 1) {
+        //             sum = sum + i;
+        //         };
+        //     };
+        //     console.log(sum);
+        // };
+
+        // let s = 11;
+        // sum_snt(s);
+
+        // function kiem_tra_snt(n) {
+        //     if (n < 2) {
+        //         return 1;
+        //     };
+        //     for (var i = 2; i <= Math.sqrt(n); i++) {
+        //         if (n % i == 0 && n != i) {
+        //             return 1;
+        //             break;
+        //         };
+        //     };
+        // };
+
+
+        // Bài 5: Cho 1 số nguyên dương, viết hàm tính tổng tất cả các ước số của số đó.
+
+        // function sum(a) {
+        //     sum = 0;
+        //     for (let i = 1; i <= a; i++) {
+        //         if (a % i === 0) {
+        //             sum += i
+        //         }
+        //     }
+        //     console.log(sum);
+        // }
+
+        // let a = 3;
+        // sum(a);
+
+
+        //////////////Xử lý Object//////////////
+        // 1. Viết hàm để lấy danh sách các key của object
+        // vd:
+        // var user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // => name, age, email
+
+        // function key(user) {
+        //     console.log(Object.keys(users));
+        // }
+
+        // var users = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // key(users)
+
+        // 2. Viết hàm để lấy danh sách các value của object
+        // vd:
+        // var user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // => 'Trương Minh Thúy', 25, 'support@techmaster.vn'
+
+
+        // function value(obj) {
+        //     console.log(Object.values(user));
+        // }
+
+        // let user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // value(user);
+
+
+        // 3. Viết hàm kiểm tra key có tồn tại trong Object không
+        // vd:
+        // var user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // => checkKey('name') => true
+        // checkKey('study') => false
+
+
+        // function checkKey(obj, str) {
+        //     let a = Object.keys(user);
+        //     let flag = false;
+        //     for (let i = 0; i < a.length; i++) {
+        //         if (a[i] === str) {
+        //             flag = true;
+        //         }
+        //     }
+        //     console.log(flag);
+        // }
+
+        // let user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+
+        // checkKey(user, 'name');
+        // checkKey(user, 'study');
+
+
+        // 4. Viết hàm kiểm tra Object có độ dài bao nhiêu
+        // vd:
+        // var user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+        // => getLengthObject(user) => 3
+
+        // function getLengthObject(user) {
+        //     console.log(Object.keys(user).length);
+        // }
+
+        // var user = {
+        //     name: "Trương Minh Thúy",
+        //     age: 25,
+        //     email: 'support@techmaster.vn'
+        // };
+
+        // getLengthObject(user);
+
+
+        // 5. Cho mảng các user
+        // mỗi object có cấu trúc như sau
+        // user = {
+        //     name: string,
+        //     age: number,
+        //     isStatus: bool
+        // }
+
+        // Viết function lấy ra những user có tuổi > 25 và isStatus = true
+
+        // function onlineUser(arr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i]['age'] > 25 && arr[i]['isStatus'] === true) {
+        //             console.log(arr[i]);
+        //         }
+        //     }
+        // }
+
+        // let arr = [
+        //     user1 = {
+        //         name: 'nam',
+        //         age: 21,
+        //         isStatus: true
+        //     },
+        //     user2 = {
+        //         name: 'thao',
+        //         age: 28,
+        //         isStatus: false
+        //     },
+        //     user3 = {
+        //         name: 'minh',
+        //         age: 26,
+        //         isStatus: true
+        //     },
+        //     user4 = {
+        //         name: 'linh',
+        //         age: 27,
+        //         isStatus: true
+        //     },
+        // ];
+
+        // onlineUser(arr);
+
+        // 6. Tương tự bài 5
+        // Viết function sắp xếp các user theo tuổi tăng dần
+
+        function sortUser(arr) {
+            console.log(arr.sort(function (a, b) { return a.age - b.age }));
+        }
+
+        let arr = [
+            user1 = {
+                name: 'nam',
+                age: 21,
+                isStatus: true
+            },
+            user2 = {
+                name: 'thao',
+                age: 28,
+                isStatus: false
+            },
+            user3 = {
+                name: 'minh',
+                age: 26,
+                isStatus: true
+            },
+            user4 = {
+                name: 'linh',
+                age: 27,
+                isStatus: true
+            },
+        ];
+
+
+        sortUser(arr);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xuc xac</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="mainBoard">
+        <div class="player" id="colorPlayer1">
+            <p class="name">Player 1</p>
+            <p class="score" id="score1">0</p>
+            <div class="scoreBoard">
+                <p class="diem">Diem</p>
+                <p class="result">0</p>
+            </div>
+        </div>
+        <div class="player" id="colorPlayer2">
+            <p class="name">Player 2</p>
+            <p class="score" id="score2">0</p>
+            <div class="scoreBoard">
+                <p class="diem">Diem</p>
+                <p class="result">0</p>
+            </div>
+        </div>
+        <div>
+            <img style="display: none;" id="dice-1" src="dice/dice-1.png" alt="">
+        </div>
+        <div>
+            <img style="display: none;" id="dice-2" src="dice/dice-2.png" alt="">
+        </div>
+        <button id="newGame">
+            <i class="iconNewGame" class="fa fa-plus-circle" aria-hidden="true"></i>
+            <p class="newGameFont">GAME MOI</p>
+        </button>
+        <button id="roll">
+            <i id="rollIcon" class="fa fa-refresh" aria-hidden="true"></i>
+            <p id="rollFont">LAC XUC XAC</p>
+        </button>
+        <button id="save">
+            <i id="saveIcon" class="fa fa-download" aria-hidden="true"></i>
+            <p id="saveFont">LUU DIEM</p>
+        </button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

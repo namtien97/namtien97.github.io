@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sach todo</title>
+</head>
+
+<body>
+    <h1>Day la danh sach todo</h1>
+
+    <form action="/new-todo" method="POST">
+        <input type="text" name="title">
+        <button type="submit"> Tao todo</button>
+    </form>
+
+    <% for(let i = 0; i < result.length; i++) { %>
+    <p><%= result[i] %></p>
+    <% } %>
+</body>
+
+</html>

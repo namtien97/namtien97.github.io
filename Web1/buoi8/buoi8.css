@@ -1,0 +1,14 @@
+.outer-flex{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 300px;
+    border: solid 1px black;
+}
+
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: solid 1px black;
+    text-align: center;
+}
