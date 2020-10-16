@@ -1,10 +1,12 @@
 package bai2;
 
-public interface AddressBook<?> extends Comparable<?> {
+import java.util.List;
 
-    void add(K key, V value);
+public interface AddressBook<T> extends Comparable<T> {
 
-    K search(K V);
+    void add(T o);
 
-    void sort();
+    boolean search(String name);
+
+    List<T> sort(int compareAttribute);
 }

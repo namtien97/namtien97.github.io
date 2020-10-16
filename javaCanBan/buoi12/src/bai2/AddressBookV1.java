@@ -2,33 +2,38 @@ package bai2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 
 public class AddressBookV1 implements AddressBook<Person> {
 
-    ArrayList<Person> person = new ArrayList<>();
+    private ArrayList<Person> list;
+
+    public AddressBookV1() {
+        this.list = new ArrayList<>();
+    }
+
+
 
     @Override
-    public void add(Person newPerson, Object o2) {
-        person.add(newPerson);
+    public void add(Person o) {
+        list.add(o);
     }
 
     @Override
-    public Person search(String name) {
-        Person result = null;
-        for (int i = 0; i < person.size(); i++) {
-            if (person.contains(name)) {
-                result = person.get(i);
-            } else {
-                continue;
-            }
-        }
-        return result;
+    public boolean search(String name) {
+       for(var item:list){
+           if(item.getName().contains(name)){
+               return true;
+           }
+       }
+        return false;
     }
 
     @Override
-    public void sort() {
-        Collections.sort(person);
+    public List<Person> sort() {
+        Collections.sort(list);
+        return list;
     }
 
 

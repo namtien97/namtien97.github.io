@@ -34,4 +34,9 @@ public class GamePlayer extends Player {
     public void removeScore() {
         super.setScore((byte) 0);
     }
+
+    @Override
+    public String toString() {
+        return "GamePlayer{" + getScore();
+    }
 }

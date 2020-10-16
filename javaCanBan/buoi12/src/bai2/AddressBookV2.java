@@ -1,34 +1,41 @@
 package bai2;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class AddressBookV2 implements AddressBook<Person> {
-    private int size;
+    private Map<Integer, Person> map;
+    private static int index;
 
     public AddressBookV2(int size) {
-        this.size = size;
+        map = new HashMap(size);
     }
 
-    Map<String, Person> personMap = new HashMap<>();
 
     @Override
-    public void add(String k, Person o) {
-        personMap.put(k, o);
-    }
-
-    @Override
-    public Person search(String o) {
-        return null;
+    public void add(Person o) {
+        map.put(index++, o);
     }
 
     @Override
-    public void sort() {
-
+    public boolean search(String name) {
+        for(var item:map.entrySet()){
+            if(item.getValue().equals(name)){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
-    public int compareTo(Object o) {
+    public List<Person> sort() {
+        Person[] sortedList = (Person[])map.values().toArray();
+        var sorted = (Arrays.asList(sortedList));
+        Collections.sort(sorted);
+        return sorted;
+    }
+
+    @Override
+    public int compareTo(Person o) {
         return 0;
     }
 }

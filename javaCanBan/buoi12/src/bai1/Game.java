@@ -1,6 +1,8 @@
 package bai1;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -12,11 +14,10 @@ public abstract class Game implements GameLoop, Iterable<GamePlayer> {
         players.add(namePlayer);
     }
 
-    public GamePlayer getPlayer() {
-        for (int i = 0; i < players.size(); i++) {
-            return players.get(i);
-        }
-        return new GamePlayer();
+    public void getPlayer() {
+        for(int i = 0;i<players.size();i++){
+            System.out.println(players.get(i));
+        };
     }
 
     public int getSize() {

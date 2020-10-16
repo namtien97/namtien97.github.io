@@ -1,12 +1,15 @@
 package bai2;
 
-public class Person implements Comparable<Person>{
+import java.util.Comparator;
+
+public class Person implements Comparable<Person> {
 
     private String name;
     private int age;
-    private String sex;
+    private char sex;
+    private int compareAttribute;
 
-    public Person(String name, int age, String sex) {
+    public Person(String name, int age, char sex) {
         this.name = name;
         this.age = age;
         this.sex = sex;
@@ -28,16 +31,37 @@ public class Person implements Comparable<Person>{
         this.age = age;
     }
 
-    public String getSex() {
+    public char getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(char sex) {
         this.sex = sex;
     }
 
     @Override
     public int compareTo(Person o) {
-        return this.name.compareTo(o.name);
+        return compare(o, compareAttribute);
     }
+
+    private int compare(Person o, int compareAttribute) {
+        if (compareAttribute == 1) {
+            return this.getAge() - o.getAge();
+        } else {
+            return this.getName().compareTo(o.getName());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "name='" + name + '\'' +
+                ", age=" + age +
+                ", sex=" + sex + "\n";
+    }
+
+    public void setCompareAttribute(int compareAttribute) {
+        this.compareAttribute = compareAttribute;
+    }
+
+    private Comparator getComparator(int compareAttribute)
 }

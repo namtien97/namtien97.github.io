@@ -62,7 +62,7 @@ public class RockPaperScissorsGame extends Game {
         } else {
             System.out.println("    Người chơi thua.");
         }
-        System.out.println(super.getPlayer());
+        super.getPlayer();
         System.out.println(super.getSize());
     }
 
