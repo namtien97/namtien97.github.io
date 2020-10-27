@@ -83,7 +83,7 @@ public class LaunchedSale extends Sale {
             System.out.println("------------------------------");
             idCus = sc.nextInt();
             System.out.println("------------------------------");
-            if (idCus == 1 || idCus == 2 || idCus == 3) {
+            if (idCus == 0 || idCus == 1 || idCus == 2) {
                 break;
             } else {
                 System.out.println("Chon dung id khach hang");
@@ -117,7 +117,7 @@ public class LaunchedSale extends Sale {
             System.out.println("------------------------------");
             idSup = sc.nextInt();
             System.out.println("------------------------------");
-            if (idSup == 1 || idSup == 2 || idSup == 3) {
+            if (idSup == 0 || idSup == 1 || idSup == 2) {
                 break;
             } else {
                 System.out.println("Chon dung id nha cung cap");

@@ -17,7 +17,7 @@ public class Supplier extends CompanyInfo {
     }
 
     public void increaseTrans(double totalBill) {
-        supplierTrans = +totalBill;
+        supplierTrans += totalBill;
     }
 
     @Override
