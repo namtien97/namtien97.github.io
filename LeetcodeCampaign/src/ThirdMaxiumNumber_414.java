@@ -1,6 +1,7 @@
 public class ThirdMaxiumNumber_414 {
     public static int thirdMax(int[] nums) {
         int result = 0;
+        int count = 1;
         if (nums.length == 2) {
             if (nums[0] > nums[1]) {
                 return nums[0];
@@ -12,36 +13,42 @@ public class ThirdMaxiumNumber_414 {
         } else {
             //ap dung thuat toan sap xep chon
             for (int i = 0; i < nums.length; i++) {
-                int indexMin = i;
+                int indexMax = i;
                 for (int j = i + 1; j < nums.length; j++) {
-                    if (nums[j] < nums[indexMin]) {
-                        indexMin = j;
+                    if (nums[j] > nums[indexMax]) {
+                        indexMax = j;
                     }
                 }
-                if (indexMin != i) {
+                if (indexMax != i) {
                     int t = nums[i];
-                    nums[i] = nums[indexMin];
-                    nums[indexMin] = t;
+                    nums[i] = nums[indexMax];
+                    nums[indexMax] = t;
                 }
             }
-
-            for (int k = nums.length - 2; k >= 0; k--) {
-                if(nums.length==3&&(nums[0]==nums[1]||nums[1]==nums[2])){
-                    return nums[nums.length-1];
-                }
-                if (k == 0) {
-                    return nums[k];
-                }
-                if (nums[k] > nums[k - 1] && nums[k] != nums[nums.length - 2]) {
-                    return nums[k];
+            int j = 1;
+            for (int i = 0; i < nums.length; i++) {
+                while (true) {
+                    if (j == nums.length) {
+                        break;
+                    }
+                    if (nums[i] != nums[j]) {
+                        nums[i + 1] = nums[j];
+                        count++;
+                        break;
+                    } else {
+                        j++;
+                    }
                 }
             }
         }
-        return result;
+        if(count == 2){
+            return nums[0];
+        }
+        return nums[2];
     }
 
     public static void main(String[] args) {
-        int[] nums = {2,2,2,1};
+        int[] nums = {1,1,2};
         System.out.println(thirdMax(nums));
     }
 }
