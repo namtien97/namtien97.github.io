@@ -1,30 +1,21 @@
 public class Leetcode_Replace_Elements_with_Greatest_Element_on_Right_Side {
     public static int[] replaceElements(int[] arr) {
-        int i = 0;
-        int j = 1;
-        while (true) {
-            if (i == arr.length - 1) {
-                arr[i] = -1;
-                break;
-            }
-            if(arr[i]<arr[j]){
-                if(i!=0) {
-                    arr[i - 1] = arr[j];
-                }
-                while (true){
-                    if(i==j){
-                        break;
-                    }else {
-                        arr[i]=arr[j];
-                        i++;
-                    }
-                }
-                i = j+(arr.length)-j+2;
-                j+=2;
-            }else{
-                j++;
+        int n = arr.length;
+        //So sanh
+        for (int i = n - 1; i >= 0; i--) {
+            if (i != n - 1) {
+                arr[i] = Math.max(arr[i], arr[i+1]);
             }
         }
+        //Dich len tren 1 index
+        for (int i = 1; i < n; i++) {
+            arr[i - 1] = arr[i];
+        }
+        //Cho index cuoi = -1
+        if(n>0){
+            arr[n-1]=-1;
+        }
+
         return arr;
     }
 
