@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02447c68-f216-49ed-94a7-b3f1e7b2b8f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../car2/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../car2/src/main/resources/static/csv/cars.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeetcodeCampaign/out/production/NguyenNam/HeightChecker_1051.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/Servers/Tomcat v8.0 Server at localhost-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/Servers/Tomcat v8.0 Server at localhost-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/api/NewAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/api/NewAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/web/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/ICategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/ICategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/INewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/INewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/NewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/NewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/mapper/NewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/mapper/NewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CategoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CommentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/NewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/NewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/RoleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/RoleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/INewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/INewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/NewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/NewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/admin/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/admin/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/admin/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/common/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/decorators/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/decorators/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/views/admin/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/views/admin/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp_servlet/new-jdbc-11-2020/src/main/webapp/views/web/home.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mKcCCsMaQyvNGIJkCwgZ3PHeUk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02447c68-f216-49ed-94a7-b3f1e7b2b8f4" name="Default Changelist" comment="" />
+      <created>1609245593105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609245593105</updated>
+      <workItem from="1609245594246" duration="1213000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${newPost}" method="post">
+    <input type="text" placeholder="Title" th:field="*{title}"/><br><br>
+    <input type="text" placeholder="Content" th:field="*{content}"/><br><br>
+    <!--<input type="text" placeholder="Author" th:field="*{author}"/><br><br>-->
+    <!--<input type="hidden"  th:value="${idUser}" name="author" id="author" th:field="*{author}/><br><br>-->
+    <button type="submit">Create</button>
+</form>
+</body>
+</html>

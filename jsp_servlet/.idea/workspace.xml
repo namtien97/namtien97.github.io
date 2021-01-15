@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="799ea6e0-d0ed-4699-9615-271f80135d32" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/api/NewAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/admin/api/NewAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/controller/web/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/INewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/INewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/NewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/dao/impl/NewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/mapper/NewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/mapper/NewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CategoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/CommentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/NewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/NewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/RoleModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/RoleModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/model/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/INewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/INewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/NewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/java/com/hocjspservlet/service/impl/NewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/WEB-INF/decorators.xml" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/WEB-INF/decorators.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/admin/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/admin/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/admin/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/common/web/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/decorators/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/decorators/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/decorators/web.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/decorators/web.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/views/admin/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/views/admin/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/views/web/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/new-jdbc-11-2020/src/main/webapp/views/web/home.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:\UngDung\IntelliJ IDEA Community Edition 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kpTLz0hrjZkNLey7kQNOYaO8wI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LeetcodeCampaign" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="799ea6e0-d0ed-4699-9615-271f80135d32" name="Default Changelist" comment="" />
+      <created>1606396483476</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606396483476</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1606542198852">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1606542198852" />
+  </component>
+</project>

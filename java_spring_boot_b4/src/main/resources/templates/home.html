@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Converter</title>
+</head>
+<body>
+  <h1>Money Converter</h1>
+  <!--request-->
+  <form action="#" th:action="@{/money}" method="post" th:object="${converterRequest}">
+    <label for="amount">Amount</label>
+    <input type="number" min="1" id="amount" placeholder="Your amount" th:field="${converterRequest.amount}"/><br><br>
+    <br>
+    <label for="fromCurrencySelect">From</label>
+    <select th:field="${converterRequest.fromCurrency}" id="fromCurrencySelect">
+      <option th:each="currency:${currencies}" th:value="${currency.code}" th:text="${currency.name}"></option>
+    </select>
+    <label for="toCurrencySelect">to</label>
+    <select th:field="${converterRequest.toCurrency}" id="toCurrencySelect">
+      <option th:each="currency:${currencies}" th:value="${currency.code}" th:text="${currency.name}"></option>
+    </select>
+    <br><br>
+    <button type="submit">Convert</button>
+  </form>
+  <br>
+  <!--response-->
+  <div th:object="${converterResult}">
+    <strong>Result:</strong>
+    <p th:text="${converterResult.amountResult}" ></p>
+  </div>
+</body>
+</html>

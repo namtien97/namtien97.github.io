@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Car</title>
+</head>
+<body>
+<a href="/car">Home</a>&emsp;&emsp;&emsp;
+<a href="/car/add">Add</a>&emsp;&emsp;&emsp;
+<a href="/car/search">Search</a>
+<ul>
+    <li th:each="car: ${cars}">
+        <a th:href="@{/car/{id}(id=${car.id})}"><strong th:text="${car.model}"></strong></a><br>
+        <i><p>Manufacturer</p></i>
+        <p th:text="${car.manufacturer}"></p>
+        <i><p>Price</p></i>
+        <p th:text="${car.price}"></p>
+        <i><p>Sales</p></i>
+        <p th:text="${car.sales}"></p>
+        <img th:attr="src=@{'/images/'+${car.id}+'.jpg'}"/>
+    </li>
+</ul>
+</body>
+</html>

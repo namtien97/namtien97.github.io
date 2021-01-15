@@ -8,4 +8,5 @@ public interface GenericDAO<T> {
 	<T> List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters);
 	void update (String sql, Object... paremeters);
 	Long insert (String sql, Object... paremeters);
+	int count (String sql, Object... paremeters);
 }

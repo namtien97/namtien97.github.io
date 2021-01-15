@@ -9,17 +9,21 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import com.hocjspservlet.dao.GenericDAO;
 import com.hocjspservlet.mapper.RowMapper;
 
 public class AbstractDAO<T> implements GenericDAO<T> {
+	
+	 ResourceBundle resourceBundle = ResourceBundle.getBundle("db");
+	
 	public Connection getConnection() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/newservlet11month2020";
-			String user = "root";
-			String password = "techmaster";
+			Class.forName(resourceBundle.getString("driverName"));
+			String url = resourceBundle.getString("url");
+			String user = resourceBundle.getString("user");
+			String password = resourceBundle.getString("password");
 			return DriverManager.getConnection(url, user, password);
 		} catch (ClassNotFoundException | SQLException e) {
 			return null;
@@ -72,7 +76,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 					statement.setString(index, (String) paremeter);
 				} else if (paremeter instanceof Integer) {
 					statement.setInt(index, (Integer) paremeter);
-				} else if(paremeter instanceof Timestamp) {
+				} else if (paremeter instanceof Timestamp) {
 					statement.setTimestamp(index, (Timestamp) paremeter);
 				}
 			}
@@ -123,11 +127,11 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 			Long id = null;
 			connection = getConnection();
 			connection.setAutoCommit(false);
-			statement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+			statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			setParemeter(statement, paremeters);
 			statement.executeUpdate();
 			resultSet = statement.getGeneratedKeys();
-			if(resultSet.next()) {
+			if (resultSet.next()) {
 				id = resultSet.getLong(1);
 			}
 			connection.commit();
@@ -156,5 +160,39 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public int count(String sql, Object... paremeters) {
+		Connection connection = null;
+		PreparedStatement statement = null;
+		ResultSet resultSet = null;
+		try {
+			int count = 0;
+			connection = getConnection();
+			statement = connection.prepareStatement(sql);
+			setParemeter(statement, paremeters);
+			resultSet = statement.executeQuery();
+			while (resultSet.next()) {
+				count = resultSet.getInt(1);
+			}
+			return count;
+		} catch (SQLException e) {
+			return 0;
+		} finally {
+			try {
+				if (connection != null) {
+					connection.close();
+				}
+				if (statement != null) {
+					statement.close();
+				}
+				if (resultSet != null) {
+					resultSet.close();
+				}
+			} catch (SQLException e) {
+				return 0;
+			}
+		}
 	}
 }
