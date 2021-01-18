@@ -5,13 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<h1>All Posts</h1>
+<h1 th:text="${user.fullname} + '\'s micro blog'"></h1>
 <a href="/logout">Logout</a>
-<ul>
-    <li th:each="book: ${books}">
-        <a th:href="@{/book/{id}(id=${book.id})}"><strong th:text="${book.title}"></strong></a><br>
-        <p th:text="${book.description}"></p>
-    </li>
-</ul>
+<a href="/create">Create post</a>
 </body>
 </html>

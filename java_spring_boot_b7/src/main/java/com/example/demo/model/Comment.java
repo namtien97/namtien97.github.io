@@ -34,6 +34,11 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     private User commenter;
 
+    public void setCommenter(User user){
+        user.getComments().add(this);
+        this.commenter=user;
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Post post;
 }

@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 public class User {
     @Id
-    private String id;
+    private long id;
 
     @Column(nullable = false, length = 64)
     private String fullname;
@@ -52,10 +52,10 @@ public class User {
     )
     @JoinColumn(name = "user_id")
     private List<Comment> comments = new ArrayList<>();
-    public void addComment(Comment comment) {
+    /*public void addComment(Comment comment) {
         comments.add(comment);
         comment.setCommenter(this);
-    }
+    }*/
     public void removeComment(Comment comment) {
         comments.remove(comment);
         comment.setCommenter(null);

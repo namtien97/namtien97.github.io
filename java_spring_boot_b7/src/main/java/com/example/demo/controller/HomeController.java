@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.DTO.UserInfo;
 import com.example.demo.controller.request.LoginRequest;
-import com.example.demo.security.CookieManager;
 import com.example.demo.service.IAuthenService;
 import com.example.demo.service.impl.AuthenException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,12 +20,8 @@ public class HomeController {
     @Autowired
     private IAuthenService authenService;
 
-    @Autowired private CookieManager cookieManager;
+    public final String LOGIN_REQUEST = "loginRequest";
 
-    final String LOGIN_REQUEST = "loginRequest";
-    final String LOGIN_TEMPLATE = "login.html";
-    final String LOGIN_COOKIE = "loginsuccess";
-    final String REDIRECT_POSTS = "redirect:/posts";
 
     @GetMapping("/")
     public String home() {
@@ -35,7 +30,7 @@ public class HomeController {
 
     @GetMapping("/login")
     public String showLoginForm(Model model, HttpServletRequest request) {
-        if (cookieManager.getAuthenticatedEmail(request) != null) {
+        if (authenService.isLogined(request)) {
             return Route.REDIRECT_POSTS;
         }
         model.addAttribute(LOGIN_REQUEST, new LoginRequest());
@@ -44,7 +39,7 @@ public class HomeController {
 
     @GetMapping("/logout")
     public String logout(HttpServletResponse response) {
-        cookieManager.setNotAuthenticated(response);
+        authenService.clearLoginedCookie(response);
         return Route.REDIRECT_HOME;
     }
 
@@ -55,21 +50,18 @@ public class HomeController {
                               HttpServletResponse response){
         if (!bindingResult.hasErrors()) {
             try {
-                authenService.login(loginRequest);
-                Cookie loginCookie = new Cookie(LOGIN_COOKIE, loginRequest.getEmail());
-                loginCookie.setMaxAge(30 * 60);
-                response.addCookie(loginCookie);
-
-                return REDIRECT_POSTS;
+                UserInfo user = authenService.login(loginRequest);
+                authenService.setLoginedCookie(response, user);
+                return Route.REDIRECT_POSTS;
             } catch (AuthenException e) {
                 model.addAttribute(LOGIN_REQUEST, new LoginRequest(loginRequest.getEmail(), ""));
                 model.addAttribute("errorMessage", e.getMessage());
-                return LOGIN_TEMPLATE;
+                return Route.LOGIN_TEMPLATE;
             }
         } else {
             model.addAttribute(LOGIN_REQUEST, new LoginRequest());
             model.addAttribute("errorMessage", "Submitted is invalid");
-            return LOGIN_TEMPLATE;
+            return Route.LOGIN_TEMPLATE;
         }
     }
 }

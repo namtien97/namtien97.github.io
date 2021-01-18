@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.example.demo.repository.IUserRepository;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,11 @@ public class Post {
         lastUpdate = LocalDateTime.now();
     }
 
+    public Post(String title,String content){
+        this.title=title;
+        this.content=content;
+    }
+
     @OneToMany(
             cascade = CascadeType.ALL,
             orphanRemoval = true
@@ -50,5 +56,6 @@ public class Post {
         comment.setPost(null);
     }
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id",nullable = false)
     private User author;
 }

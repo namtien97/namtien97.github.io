@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${post.title}"></title>
+</head>
+<body>
+<a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a><br>
+<a th:href="@{/edit/{id}(id=${post.id})}">Edit post</a><br>
+<a href="/create">Create post</a><br><br>
+<strong th:text="${post.title}"></strong><br>
+<p th:text="${post.lastUpdate}"></p>
+<p th:text="${post.content}"></p>
+<a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a><br>
+
+</body>
+</html>
