@@ -50,5 +50,4 @@ public class Comment {
 
   @ManyToOne(fetch = FetchType.LAZY)
   private Post post; //Mỗi comment phải gắn vào một post
- 
 }

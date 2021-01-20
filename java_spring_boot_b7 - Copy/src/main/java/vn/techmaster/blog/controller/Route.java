@@ -7,4 +7,6 @@ public class Route {
     public static final String ALLPOSTS = "posts.html";
     public static final String CREATEPOSTS = "create.html";
     public static final String POST = "post.html";
+    public static final String REDIRECT_POST = "redirect:/post";
+    public static final String CREATE_COMMENT = "createComment.html";
 }

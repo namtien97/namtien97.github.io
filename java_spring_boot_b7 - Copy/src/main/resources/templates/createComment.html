@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Comment</title>
+</head>
+<body>
+<form action="#" th:action="@{/saveComment/{id}(id=${post.id})}" th:object="${comment}" method="post">
+    <input type="text" placeholder="Comment" th:field="*{content}"/><br><br>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

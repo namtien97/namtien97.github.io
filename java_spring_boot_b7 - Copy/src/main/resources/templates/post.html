@@ -5,13 +5,22 @@
     <title th:text="${post.title}"></title>
 </head>
 <body>
-<a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a><br>
-<a th:href="@{/edit/{id}(id=${post.id})}">Edit post</a><br>
-<a href="/create">Create post</a><br><br>
+<a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a>&emsp;
+<a th:href="@{/edit/{id}(id=${post.id})}">Edit post</a>&emsp;
+<a href="/create">Create post</a><br><br><br>
 <strong th:text="${post.title}"></strong><br>
 <p th:text="${post.lastUpdate}"></p>
 <p th:text="${post.content}"></p>
-<a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a><br>
-
+<br>
+</hr>
+<a th:href="@{/createComment/{id}(id=${post.id})}">Create comment</a>
+<ul>
+    <li th:each="comment: ${comments}">
+        <p th:text="${comment.lastUpdate}"></p>
+        <p th:text="${comment.content}"></p>
+    </li>
+    <br>
+</ul>
+<br>
 </body>
 </html>
