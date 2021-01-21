@@ -1,6 +1,7 @@
 package vn.techmaster.blog.service;
 
 import vn.techmaster.blog.model.Comment;
+import vn.techmaster.blog.model.Post;
 
 import java.util.List;
 

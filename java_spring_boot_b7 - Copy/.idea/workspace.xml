@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6fead36f-35f2-419f-a6ff-181049f7c831" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid11260.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/new_post.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/post_detail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sample_users.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/BlogApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/DTO/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/DTO/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/controller/CommentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/controller/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/controller/Route.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/controller/request/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/model/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/model/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/repository/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/repository/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/AuthenException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/AuthenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/IAuthenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/ICommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/techmaster/blog/service/iPostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createComment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/posts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/user.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/vn/techmaster/blog/PostCommentRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/vn/techmaster/blog/PostRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/vn/techmaster/blog/UserRepositoryTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1n8mgU97eWu5K4qqria6bAfHa5l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java_spring_boot_b7" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Techmaster\namtien97.github.io\java_spring_boot_b7 - Copy\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="vn.techmaster.blog.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6fead36f-35f2-419f-a6ff-181049f7c831" name="Default Changelist" comment="" />
+      <created>1610780203893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610780203893</updated>
+      <workItem from="1610780206019" duration="647000" />
+      <workItem from="1610790476252" duration="3484000" />
+      <workItem from="1610797280770" duration="7794000" />
+      <workItem from="1610807973838" duration="6414000" />
+      <workItem from="1610974755241" duration="5610000" />
+      <workItem from="1611114389789" duration="12393000" />
+      <workItem from="1611138941862" duration="1255000" />
+      <workItem from="1611143151677" duration="8623000" />
+      <workItem from="1611165018206" duration="515000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

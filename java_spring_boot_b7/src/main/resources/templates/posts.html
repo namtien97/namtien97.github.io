@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${user.fullname} + '\'s micro blog'"></title>
 </head>
 <body>
 <h1 th:text="${user.fullname} + '\'s micro blog'"></h1>
-<a href="/logout">Logout</a>
 <a href="/create">Create post</a>
+&emsp;
+<a href="/logout">Logout</a>
+<ul>
+    <li th:each="post: ${posts}">
+        <a th:href="@{post/{id}(id=${post.id})}"><strong th:text="${post.title}"></strong></a><br>
+        <p th:text="${post.lastUpdate}"></p>
+        <p th:text="${post.content}"></p>
+        <a th:href="@{/delete/{id}(id=${post.id})}">Delete post</a><br><br>
+    </li>
+</ul>
+
 </body>
 </html>

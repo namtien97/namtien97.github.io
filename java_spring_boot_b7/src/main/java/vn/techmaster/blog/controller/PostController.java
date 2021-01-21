@@ -8,17 +8,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import vn.techmaster.blog.DTO.UserInfo;
-import vn.techmaster.blog.model.Comment;
+import vn.techmaster.blog.controller.request.CommentRequest;
 import vn.techmaster.blog.model.Post;
 import vn.techmaster.blog.model.User;
+import vn.techmaster.blog.repository.PostRepository;
 import vn.techmaster.blog.repository.UserRepository;
 import vn.techmaster.blog.service.IAuthenService;
-import vn.techmaster.blog.service.ICommentService;
 import vn.techmaster.blog.service.PostService;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
 
@@ -34,7 +33,7 @@ public class PostController {
     private UserRepository userRepository;
 
     @Autowired
-    private ICommentService commentService;
+    private PostRepository postRepository;
 
     @GetMapping("/posts")
     public String getAllPosts(Model model, HttpServletRequest request) {
@@ -107,8 +106,8 @@ public class PostController {
         Post post = postService.getPostById(id);
         if (post != null) {
             model.addAttribute("post", post);
-            List<Comment> commentList = commentService.getAllComment();
-            model.addAttribute("comments",commentList);
+            model.addAttribute("comments",postRepository.findById(id).get().getComments());
+            model.addAttribute("commentRequest", new CommentRequest());
         }
         return Route.POST;
     }
