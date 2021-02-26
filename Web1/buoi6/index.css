@@ -1,81 +1,95 @@
 .avatar img {
-  margin-left: calc(50% - 91.5px);
-  margin-right: calc(50% - 91.5px);
-  border: solid 2px #282c34;
+    margin-left: calc(50% - 91.5px);
+    margin-right: calc(50% - 91.5px);
+    border: solid 2px #282c34;
 }
+
 .information h1 {
-  text-align: center;
+    text-align: center;
 }
+
 .information h2 {
-  text-align: center;
+    text-align: center;
 }
+
 .information p {
-  text-align: center;
+    text-align: center;
 }
+
 .icon1 img {
-  border-radius: 50%;
-  border: solid 2px white;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 457px;
-  left: calc(50% - 41px);
+    border-radius: 50%;
+    border: solid 2px white;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 457px;
+    left: calc(50% - 41px);
 }
+
 .hr1 {
-  size: 15px;
-  color: blue;
-  width: 100px;
-  position: absolute;
-  top: 490px;
-  left: calc(50% - -33px);
+    size: 15px;
+    color: blue;
+    width: 100px;
+    position: absolute;
+    top: 490px;
+    left: calc(50% - -33px);
 }
+
 .headingContact {
-  display: inline-block;
-  background-color: #24aee8;
-  position: absolute;
-  left: calc(50% - -133px);
-  top: 475px;
+    display: inline-block;
+    background-color: #24aee8;
+    position: absolute;
+    left: calc(50% - -133px);
+    top: 475px;
 }
+
 .headingContact p {
-  color: #ffffff;
+    color: #ffffff;
 }
+
 .detailContact {
-  position: absolute;
-  left: 894px;
-  top: 521px;
+    position: absolute;
+    left: 894px;
+    top: 521px;
 }
+
 .icon2 img {
-  border-radius: 50%;
-  border: solid 2px white;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 686px;
-  left: calc(50% - 41px);
+    border-radius: 50%;
+    border: solid 2px white;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 686px;
+    left: calc(50% - 41px);
 }
+
 .hr2 {
-  size: 15px;
-  color: blue;
-  width: 100px;
-  position: absolute;
-  top: 718px;
-  right: calc(50% - -33px);
+    size: 15px;
+    color: blue;
+    width: 100px;
+    position: absolute;
+    top: 718px;
+    right: calc(50% - -33px);
 }
+
 .headingEducation {
-  display: inline-block;
-  background-color: #24aee8;
-  position: absolute;
-  left: calc(50% - 188px);
-  top: 699px;
+    display: inline-block;
+    background-color: #24aee8;
+    position: absolute;
+    left: calc(50% - 188px);
+    top: 699px;
 }
+
 .headingEducation p {
-  color: #ffffff;
+    color: #ffffff;
 }
+
 .detailEducation {
-  position: absolute;
-  left: 435px;
-  top: 766px;
+    position: absolute;
+    left: 435px;
+    top: 766px;
 }
+
 .icon3 img {
     border: solid 2px white;
     width: 80px;
@@ -83,33 +97,40 @@
     position: absolute;
     top: 950px;
     left: calc(50% - 41px);
-  }
-  .hr3 {
+}
+
+.hr3 {
     size: 15px;
     color: blue;
     width: 100px;
     position: absolute;
     top: 988px;
     right: calc(50% - 141px);
-  }
-  .headingHistory p {
+}
+
+.headingHistory p {
     color: #ffffff;
-  }
-  .headingHistory {
+}
+
+.headingHistory {
     display: inline-block;
     background-color: #24aee8;
     position: absolute;
     left: calc(50% - -142px);
     top: 972px;
-  }
-  .detailHistory {
+}
+
+.detailHistory {
     position: absolute;
     left: 900px;
     top: 1020px;
-  }
-  html, body{height: 100%;}
+}
+
+html, body {
+    height: 100%;
+}
 
 hr.vertical {
-  width: 0px;
-  height: 578px;
+    width: 0px;
+    height: 578px;
 }

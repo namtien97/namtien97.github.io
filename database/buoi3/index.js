@@ -20,11 +20,6 @@ const bodyParser = require("body-parser");
 var mysql = require('mysql');
 
 
-
-
-
-
-
 const con = mysql.createConnection({
     host: '127.0.0.1',
     user: 'root',
@@ -33,7 +28,7 @@ const con = mysql.createConnection({
 });
 
 // app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 app.listen(3000, function () {
@@ -46,7 +41,7 @@ app.use(express.static(__dirname)); //link voi css
 app.get('/index', function (req, res) {
     con.query('SELECT * FROM plants', function (error, results, fields) {
         if (error) throw error;
-        return res.render('index.ejs', { plants: results });
+        return res.render('index.ejs', {plants: results});
     });
 });
 
@@ -56,9 +51,13 @@ app.post('/newPlant', function (req, res) {
     let plantName = req.body.plantName;
     let idplant = req.body.idplant;
     if (!plantImg || !plantName || !idplant) {
-        return res.status(400).send({ error: true, message: 'Please provide plant' });
+        return res.status(400).send({error: true, message: 'Please provide plant'});
     }
-    con.query("INSERT INTO plants SET ? ", { plantImg: plantImg, plantName: plantName, idplant: idplant }, function (error, results, fields) {
+    con.query("INSERT INTO plants SET ? ", {
+        plantImg: plantImg,
+        plantName: plantName,
+        idplant: idplant
+    }, function (error, results, fields) {
         if (error) throw error;
         return res.redirect("/index");
     });
@@ -71,7 +70,7 @@ app.get('/index/:idplant', function (req, res) {
     var sql = 'SELECT * FROM plants WHERE idplant = ?';
     con.query(sql, idplant, function (error, results, fields) {
         if (error) throw error;
-        return res.render('plant.ejs', { plants: results });
+        return res.render('plant.ejs', {plants: results});
     });
 });
 
@@ -81,7 +80,7 @@ app.post('/updatePlant', function (req, res) {
     let plantImg = req.body.plantImg;
     let plantName = req.body.plantName;
     if (!idplant || !plantImg || !plantName) {
-        return res.status(400).send({ error: plantName, message: 'Please provide enough information' });
+        return res.status(400).send({error: plantName, message: 'Please provide enough information'});
     }
     con.query("UPDATE plants SET plantImg = ? ,plantName = ? WHERE idplant = ?", [plantImg, plantName, idplant], function (error, results, fields) {
         if (error) throw error;
@@ -94,7 +93,7 @@ app.post('/updatePlant', function (req, res) {
 app.post('/deletePlant', function (req, res) {
     let idplant = req.body.idplant;
     if (!idplant) {
-        return res.status(400).send({ error: true, message: 'Please provide idplant' });
+        return res.status(400).send({error: true, message: 'Please provide idplant'});
     }
     con.query('DELETE FROM plants WHERE idplant = ?', [idplant], function (error, results, fields) {
         if (error) throw error;
@@ -106,15 +105,15 @@ app.post('/deletePlant', function (req, res) {
 app.post('/plantDetail', function (req, res) {
     let plantName = req.body.plantName;
     if (!plantName) {
-        return res.status(400).send({ error: true, message: 'Please provide idplant' });
+        return res.status(400).send({error: true, message: 'Please provide idplant'});
     }
     var sql = 'SELECT * FROM plants WHERE plantName = ?'
     con.query(sql, plantName, function (error, results, fields) {
         if (error) throw error;
         if (results.length < 1) {
-            return res.status(400).send({ error: true, message: 'Ban viet sai ten cay roi!' });
+            return res.status(400).send({error: true, message: 'Ban viet sai ten cay roi!'});
         }
-        return res.render('plantDetail.ejs', { plants: results });
+        return res.render('plantDetail.ejs', {plants: results});
     });
 })
 

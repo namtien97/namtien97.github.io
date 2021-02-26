@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <h1>Neu qua 10 qua bong ban se thua!</h1>
-    <canvas id="canvas" style="
+<h1>Neu qua 10 qua bong ban se thua!</h1>
+<canvas id="canvas" style="
         position: absolute;
         top: 0;
         bottom: 0;
@@ -17,88 +17,92 @@
         right: 0;
         margin: auto;"></canvas>
 
-    <script>
-        const canvas = document.getElementById("canvas");
-        const c = canvas.getContext('2d');
+<script>
+    const canvas = document.getElementById("canvas");
+    const c = canvas.getContext('2d');
 
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
-
-
-        class Ball {
-            constructor(radius, color, x, y) {
-                this.radius = radius;
-                this.color = color;
-                this.x = x;
-                this.y = y;
-            }
-
-            draw() {
-                c.beginPath();
-                c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-                c.fillStyle = this.color;
-                c.fill();
-                c.closePath();
-            }
-            move() {
-                this.y -= 5; //Chuyển động tịnh tiến đều từ trái sang phải
-                if (this.y - this.radius <= 0) {
-                    //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
-                    this.y = canvas.height - this.radius;
-                    this.x = randomIntFromRange(0, canvas.width);
-                }
-                this.draw();
-            }
-        }
-        let radius = 30;
-        balls = [];
-
-        addEventListener('click', (event) => {
-            var x = randomIntFromRange(0, canvas.width);
-            let ball = new Ball(radius, rgb(), x, canvas.height);
-            balls.push(ball)
-
-        });
-
-        addEventListener('click', (event) => {
-            console.log(`${event.offsetX},${event.offsetY}`);
-            let n = balls.length;
-            while (n--) {
-                let ball = balls[n];
-                if (Math.pow((event.offsetX - ball.x), 2) + Math.pow((event.offsetY - ball.y), 2) < Math.pow(ball.radius, 2)) {
-                    balls.splice(n, 1);
-                }
-            }
-
-        });
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
 
 
-
-        function animate() {
-            requestAnimationFrame(animate);
-            c.clearRect(0, 0, canvas.width, canvas.height);
-            balls.forEach(ball => ball.move());
-            if (balls.length === 10) {
-                console.log(balls.length);
-                alert('Ban da thua!');
-            };
-        }
-        animate();
-
-
-        function rgb() {
-            color = 'rgb(';
-            for (var i = 0; i < 3; i++) {
-                color += Math.floor(Math.random() * 255) + ',';
-            }
-            return color.replace(/\,$/, ')');
-        }
-        function randomIntFromRange(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
+    class Ball {
+        constructor(radius, color, x, y) {
+            this.radius = radius;
+            this.color = color;
+            this.x = x;
+            this.y = y;
         }
 
+        draw() {
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.closePath();
+        }
 
-    </script>
+        move() {
+            this.y -= 5; //Chuyển động tịnh tiến đều từ trái sang phải
+            if (this.y - this.radius <= 0) {
+                //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
+                this.y = canvas.height - this.radius;
+                this.x = randomIntFromRange(0, canvas.width);
+            }
+            this.draw();
+        }
+    }
+
+    let radius = 30;
+    balls = [];
+
+    addEventListener('click', (event) => {
+        var x = randomIntFromRange(0, canvas.width);
+        let ball = new Ball(radius, rgb(), x, canvas.height);
+        balls.push(ball)
+
+    });
+
+    addEventListener('click', (event) => {
+        console.log(`${event.offsetX},${event.offsetY}`);
+        let n = balls.length;
+        while (n--) {
+            let ball = balls[n];
+            if (Math.pow((event.offsetX - ball.x), 2) + Math.pow((event.offsetY - ball.y), 2) < Math.pow(ball.radius, 2)) {
+                balls.splice(n, 1);
+            }
+        }
+
+    });
+
+
+    function animate() {
+        requestAnimationFrame(animate);
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        balls.forEach(ball => ball.move());
+        if (balls.length === 10) {
+            console.log(balls.length);
+            alert('Ban da thua!');
+        }
+        ;
+    }
+
+    animate();
+
+
+    function rgb() {
+        color = 'rgb(';
+        for (var i = 0; i < 3; i++) {
+            color += Math.floor(Math.random() * 255) + ',';
+        }
+        return color.replace(/\,$/, ')');
+    }
+
+    function randomIntFromRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+</script>
 </body>
 
 </html>

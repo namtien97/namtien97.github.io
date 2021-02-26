@@ -1,17 +1,17 @@
-.centerContent{
+.centerContent {
     display: flex; /*bắt buộc phải có display: flex; mới có thể căn giữa được*/
-    justify-content: center;/*cú pháp căn giữa cho cả hình ảnh và nội dung*/
+    justify-content: center; /*cú pháp căn giữa cho cả hình ảnh và nội dung*/
 }
 
-.flexRightContent{
+.flexRightContent {
     text-align: right;
 }
 
-.justifyContent{
+.justifyContent {
     text-align: justify;
     text-justify: inter-word;
 }
 
-#NguoiLamDon{
-    margin-right: 3%;/*căn lề bên phải cách 3%*/
+#NguoiLamDon {
+    margin-right: 3%; /*căn lề bên phải cách 3%*/
 }

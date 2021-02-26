@@ -1,60 +1,63 @@
 body {
-  background-color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
 .mainBoard {
-  width: 1000px;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  position: relative;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
+
 .player {
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .scoreBoard {
-  background-color: red;
-  width: 100px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    background-color: red;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .name {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
 }
 
 .score {
-  font-size: 3.5rem;
+    font-size: 3.5rem;
 }
 
 .diem {
-  font-size: 0.7rem;
-  margin-top: 5px;
+    font-size: 0.7rem;
+    margin-top: 5px;
 }
+
 .result {
-  font-size: 1.9rem;
-  color: seashell;
-  margin: 0;
+    font-size: 1.9rem;
+    color: seashell;
+    margin: 0;
 }
 
 #colorPlayer1 {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 #colorPlayer2 {
-  background-color: gray;
+    background-color: gray;
 }
 
 /* .control {
@@ -63,55 +66,55 @@ body {
 } */
 
 #newGame {
-  position: absolute;
-  top: 10%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: none;
-  background-color: transparent;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    background-color: transparent;
 }
 
 #iconNewGame {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #newGameFont {
-  margin: 5px;
+    margin: 5px;
 }
 
 #roll {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: 70%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 70%;
 }
 
 #rollIcon {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #rollFont {
-  margin: 5px;
+    margin: 5px;
 }
 
 #save {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  top: 75%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 75%;
 }
 
 #saveIcon {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #saveFont {
-  margin: 5px;
+    margin: 5px;
 }

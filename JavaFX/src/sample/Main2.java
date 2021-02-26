@@ -29,7 +29,7 @@ public class Main2 extends Application {
         VBox layout1 = new VBox();
         layout1.getChildren().addAll(label, button1);
         Parent root;
-        scene1 = new Scene(layout1,300,200);
+        scene1 = new Scene(layout1, 300, 200);
 
         //Scene2
         Button button2 = new Button("Go back");

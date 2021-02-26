@@ -12,7 +12,7 @@ MongoClient.connect("mongodb://localhost:27017", (err, client) => {
 
 let quotes = ["Code HTML", 'Style CSS', "Day code len GITHUB"]
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.set("view engine", "ejs")
 
@@ -25,7 +25,7 @@ app.get("/about", function (req, res) {
 })
 
 app.get("/todo", function (req, res) {
-    res.render("index.ejs", { result: quotes })
+    res.render("index.ejs", {result: quotes})
 })
 
 app.post("/new-todo", function (req, res) {

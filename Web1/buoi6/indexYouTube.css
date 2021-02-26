@@ -1,211 +1,242 @@
 .navbarCustom {
-  background-color: #ffffff;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  width: auto;
-  height: 56px;
-  position: fixed;
-  z-index: 999;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+    height: 56px;
+    position: fixed;
+    z-index: 999;
 }
+
 .menuIcon img {
-  position: absolute;
-  top: 18px;
-  left: 15px;
+    position: absolute;
+    top: 18px;
+    left: 15px;
 }
+
 .logoYouTube img {
-  position: absolute;
-  top: 18px;
-  left: 54px;
-  width: 80px;
-  height: 24px;
+    position: absolute;
+    top: 18px;
+    left: 54px;
+    width: 80px;
+    height: 24px;
 }
+
 .searchBox input {
-  width: 575px;
-  height: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 6px;
-  padding-right: 6px;
-  position: absolute;
-  left: 467px;
-  top: 18px;
+    width: 575px;
+    height: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    position: absolute;
+    left: 467px;
+    top: 18px;
 }
+
 .keyboardIcon img {
-  width: 19px;
-  height: auto;
-  position: absolute;
-  left: 1017px;
-  top: 23px;
+    width: 19px;
+    height: auto;
+    position: absolute;
+    left: 1017px;
+    top: 23px;
 }
+
 .iconSearch img {
-  position: absolute;
-  left: 1042px;
-  top: 18px;
-  border: solid 1px black;
-  border-left: 0;
-  padding-right: 6px;
-  padding-left: 6px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+    position: absolute;
+    left: 1042px;
+    top: 18px;
+    border: solid 1px black;
+    border-left: 0;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
+
 .cameraIcon img {
-  position: absolute;
-  right: 200px;
-  top: 25px;
+    position: absolute;
+    right: 200px;
+    top: 25px;
 }
+
 .menuIcon2 img {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  right: 141px;
-  top: 24px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 141px;
+    top: 24px;
 }
+
 .bellIcon img {
-  position: absolute;
-  right: 100px;
-  top: 24px;
+    position: absolute;
+    right: 100px;
+    top: 24px;
 }
+
 .logoAcc img {
-  border-radius: 50%;
-  border: solid 1px #ffffff;
-  height: 32px;
-  width: 32px;
-  position: absolute;
-  right: 39px;
-  top: 21px;
+    border-radius: 50%;
+    border: solid 1px #ffffff;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 39px;
+    top: 21px;
 }
+
 .sidebarContainer {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
 }
+
 .home {
-  width: 72px;
-  height: 43.6px;
-  padding-top: 16px;
-  padding-bottom: 14px;
+    width: 72px;
+    height: 43.6px;
+    padding-top: 16px;
+    padding-bottom: 14px;
 }
+
 .home img {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 100px;
-  left: 20px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
 }
+
 .home span {
-  font-size: 10px;
-  color: #cc0000;
-  position: absolute;
-  top: 130px;
-  left: 11px;
+    font-size: 10px;
+    color: #cc0000;
+    position: absolute;
+    top: 130px;
+    left: 11px;
 }
+
 .trending {
-  width: 72px;
-  height: 43.6px;
-  padding-top: 16px;
-  padding-bottom: 14px;
+    width: 72px;
+    height: 43.6px;
+    padding-top: 16px;
+    padding-bottom: 14px;
 }
+
 .trending img {
-  position: absolute;
-  top: 189px;
-  left: 18px;
+    position: absolute;
+    top: 189px;
+    left: 18px;
 }
+
 .trending span {
-  font-size: 10px;
-  position: absolute;
-  top: 217px;
-  left: 11px;
+    font-size: 10px;
+    position: absolute;
+    top: 217px;
+    left: 11px;
 }
+
 .dangKy {
-  width: 72px;
-  height: 43.6px;
-  padding-top: 16px;
-  padding-bottom: 14px;
+    width: 72px;
+    height: 43.6px;
+    padding-top: 16px;
+    padding-bottom: 14px;
 }
+
 .dangKy img {
-  position: absolute;
-  top: 280px;
-  left: 18px;
+    position: absolute;
+    top: 280px;
+    left: 18px;
 }
+
 .dangKy span {
-  font-size: 10px;
-  position: absolute;
-  top: 310px;
-  left: 13px;
+    font-size: 10px;
+    position: absolute;
+    top: 310px;
+    left: 13px;
 }
+
 .collect {
-  width: 72px;
-  height: 43.6px;
-  padding-top: 16px;
-  padding-bottom: 14px;
+    width: 72px;
+    height: 43.6px;
+    padding-top: 16px;
+    padding-bottom: 14px;
 }
+
 .collect img {
-  position: absolute;
-  top: 353px;
-  left: 18px;
+    position: absolute;
+    top: 353px;
+    left: 18px;
 }
+
 .collect span {
-  font-size: 10px;
-  position: absolute;
-  top: 375px;
-  left: 13px;
+    font-size: 10px;
+    position: absolute;
+    top: 375px;
+    left: 13px;
 }
+
 .suggest span {
-  position: absolute;
-  top: 69px;
-  left: 90px;
-  color: var(--yt-spec-text-primary);
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 2.4rem;
+    position: absolute;
+    top: 69px;
+    left: 90px;
+    color: var(--yt-spec-text-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.4rem;
 }
+
 .mainContainer {
-  width: 100%;
-  height: auto;
-  padding-top: 100px;
-  padding-left: 100px;
-  background-color: #ebe1e1;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-left: 100px;
+    background-color: #ebe1e1;
 }
+
 .logoChannel {
-  display: inline-block;
+    display: inline-block;
 }
+
 .logoChannel img {
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
 }
+
 .videoName {
-  display: -webkit-box;
-  max-height: 3.2rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  -webkit-line-clamp: 2;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.6rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 2.2rem;
-  max-height: 4.4rem;
+    display: -webkit-box;
+    max-height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    max-height: 4.4rem;
 }
-.inforVideo{
-  display: flex;
+
+.inforVideo {
+    display: flex;
 }
-.informationVideo{
-display: flex;
-flex-direction: column;
+
+.informationVideo {
+    display: flex;
+    flex-direction: column;
 }
-.nextToNext{
-  display: flex;
+
+.nextToNext {
+    display: flex;
 }
-.videoSuggest{
-  padding-right: 68px;
+
+.videoSuggest {
+    padding-right: 68px;
 }

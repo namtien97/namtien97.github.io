@@ -1,9 +1,9 @@
 
-.flexContent{
+.flexContent {
     display: flex;
     justify-content: center;
 }
 
-.sizeWord{
+.sizeWord {
     width: 700px;
 }

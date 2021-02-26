@@ -42,10 +42,10 @@ public class HomeController {
             int idInt = Integer.parseInt(idStr);
             String priceStr = carsInfo.get(i).get(3);
             int priceInt = Integer.parseInt(priceStr);
-            cars.add(new Car(idInt ,carsInfo.get(i).get(1),carsInfo.get(i).get(2),priceInt));
+            cars.add(new Car(idInt, carsInfo.get(i).get(1), carsInfo.get(i).get(2), priceInt));
         }
 
-        model.addAttribute(CARS,cars);
+        model.addAttribute(CARS, cars);
         model.addAttribute(APP_NAME, appName);
         return "home";
     }

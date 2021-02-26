@@ -18,8 +18,8 @@ jQuery(document).ready(function ($) {
     $back_to_top.on('click', function (event) {
         event.preventDefault();
         $('body,html').animate({
-            scrollTop: 0,
-        }, scroll_top_duration
+                scrollTop: 0,
+            }, scroll_top_duration
         );
         console.log(true);
     });

@@ -1,7 +1,6 @@
 let roll = document.getElementById('roll');
 
 
-
 let dice1 = document.getElementById('dice-1');
 let dice2 = document.getElementById('dice-2');
 

@@ -9,7 +9,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 
-public class Main1 extends Application{
+public class Main1 extends Application {
     Button button;
 
     public static void main(String[] args) {

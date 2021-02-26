@@ -2,136 +2,140 @@
 <html>
 
 <body>
-  <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 </body>
 
 </html>
 <script>
-  var canvas = document.getElementById("canvas");
-  var c = canvas.getContext("2d");
-  //innerWidth là thuộc tính sẽ trả về giá trị của window, từ đó có thể tự động
-  //kích thước của canvas có thể được nhận tự động theo giá trị của window
-  // phải setup giá trị của canvas nhỏ hơn 25 để quả bóng không bị trôi ra ngoài window
-  canvas.width = innerWidth - 25;
-  canvas.height = innerHeight - 25;
-  class Ball {
-    constructor(x, y, delta, radius, color) {//tạo 1 class ball nhận 5 giá trị, 4 giá trị đầu là thể hiện vị trí, giá trị cuối thể hiện màu
-      this.state = 0;//setup điểm bắt đầu của quả bóng 
-      this.margin = 1;
-      this.x = x + this.margin;
-      this.y = y + this.margin;
-      this.delta = delta;
-      this.radius = radius;
-      this.color = color;
+    var canvas = document.getElementById("canvas");
+    var c = canvas.getContext("2d");
+    //innerWidth là thuộc tính sẽ trả về giá trị của window, từ đó có thể tự động
+    //kích thước của canvas có thể được nhận tự động theo giá trị của window
+    // phải setup giá trị của canvas nhỏ hơn 25 để quả bóng không bị trôi ra ngoài window
+    canvas.width = innerWidth - 25;
+    canvas.height = innerHeight - 25;
 
-      // tạo trạng thái dừng của quả bóng
-      this.pauseFlag = true;
-    }
-    // tạo trạng thái dừng của quả bóng
-    pause() {
-      this.pauseFlag = !this.pauseFlag;
-    }
-    // vẽ quả bóng
-    draw() {
-      c.beginPath();
-      c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-      c.fillStyle = this.color;
-      c.fill();
-      c.stroke();
-      c.closePath();
-    }
+    class Ball {
+        constructor(x, y, delta, radius, color) {//tạo 1 class ball nhận 5 giá trị, 4 giá trị đầu là thể hiện vị trí, giá trị cuối thể hiện màu
+            this.state = 0;//setup điểm bắt đầu của quả bóng
+            this.margin = 1;
+            this.x = x + this.margin;
+            this.y = y + this.margin;
+            this.delta = delta;
+            this.radius = radius;
+            this.color = color;
 
-    // tạo trạng thái di chuyển của quả bóng
-    move(dx, dy) {
-      if (!this.pauseFlag) {
-        // khai báo 2 biến dx và dy
-        var dx = 0;
-        var dy = 0;
-        // State management
-        switch (this.state) {
-          // khi quả bóng ở bên trên
-          case 0:
-            dx = this.delta;
-            dy = 0;
-            this.color = "pink";
-            if (this.x === canvas.width - this.radius - this.margin) {
-              this.state = 1;
-            }
-            break;
-          // khi quả bóng ở bên phải
-          case 1:
-            dx = 0;
-            dy = this.delta;
-            this.color = "blue";
-            if (this.y === canvas.height - this.radius - this.margin) {//trả về giá trị chính xác
-              this.state = 2;
-            }
-            break;
-          // khi quả bóng ở bên dưới
-          case 2:
-            dx = -this.delta;
-            dy = 0;
-            this.color = "black";
-            if (this.x === this.radius) {
-              this.state = 3;
-            }
-            break;
-          //Khi quả bóng ở bên trái
-          case 3:
-            dx = 0;
-            dy = -this.delta;
-            this.color = "orange";
-            if (this.y === this.radius) {
-              this.state = 0;
-            }
-            break;
-
-          // chuyển trạng thái của quả bóng về 0
-          default:
-            this.state = 0;
+            // tạo trạng thái dừng của quả bóng
+            this.pauseFlag = true;
         }
 
-        //setup khoảng giá trị tối đa và tối thiểu của biến x
-        var maxX = canvas.width - this.radius - this.margin;
-        var minX = this.radius;
+        // tạo trạng thái dừng của quả bóng
+        pause() {
+            this.pauseFlag = !this.pauseFlag;
+        }
 
-        //setup khoảng giá trị tối đa và tối thiểu của biến y
-        var maxY = canvas.height - this.radius - this.margin;
-        var minY = this.radius;
+        // vẽ quả bóng
+        draw() {
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.stroke();
+            c.closePath();
+        }
 
-        //cập nhật giá trị mới cho biến x
-        this.x = this.x + dx;
-        if (this.x > maxX) this.x = maxX;
-        if (this.x < minX) this.x = minX;
+        // tạo trạng thái di chuyển của quả bóng
+        move(dx, dy) {
+            if (!this.pauseFlag) {
+                // khai báo 2 biến dx và dy
+                var dx = 0;
+                var dy = 0;
+                // State management
+                switch (this.state) {
+                    // khi quả bóng ở bên trên
+                    case 0:
+                        dx = this.delta;
+                        dy = 0;
+                        this.color = "pink";
+                        if (this.x === canvas.width - this.radius - this.margin) {
+                            this.state = 1;
+                        }
+                        break;
+                    // khi quả bóng ở bên phải
+                    case 1:
+                        dx = 0;
+                        dy = this.delta;
+                        this.color = "blue";
+                        if (this.y === canvas.height - this.radius - this.margin) {//trả về giá trị chính xác
+                            this.state = 2;
+                        }
+                        break;
+                    // khi quả bóng ở bên dưới
+                    case 2:
+                        dx = -this.delta;
+                        dy = 0;
+                        this.color = "black";
+                        if (this.x === this.radius) {
+                            this.state = 3;
+                        }
+                        break;
+                    //Khi quả bóng ở bên trái
+                    case 3:
+                        dx = 0;
+                        dy = -this.delta;
+                        this.color = "orange";
+                        if (this.y === this.radius) {
+                            this.state = 0;
+                        }
+                        break;
 
-        //cập nhật giá trị mới cho biến y
-        this.y = this.y + dy;
-        if (this.y > maxY) this.y = maxY;
-        if (this.y < minY) this.y = minY;
-      }
-      this.draw();
+                    // chuyển trạng thái của quả bóng về 0
+                    default:
+                        this.state = 0;
+                }
+
+                //setup khoảng giá trị tối đa và tối thiểu của biến x
+                var maxX = canvas.width - this.radius - this.margin;
+                var minX = this.radius;
+
+                //setup khoảng giá trị tối đa và tối thiểu của biến y
+                var maxY = canvas.height - this.radius - this.margin;
+                var minY = this.radius;
+
+                //cập nhật giá trị mới cho biến x
+                this.x = this.x + dx;
+                if (this.x > maxX) this.x = maxX;
+                if (this.x < minX) this.x = minX;
+
+                //cập nhật giá trị mới cho biến y
+                this.y = this.y + dy;
+                if (this.y > maxY) this.y = maxY;
+                if (this.y < minY) this.y = minY;
+            }
+            this.draw();
+        }
     }
-  }
 
-  var radius = 20;
-  var color = "red";
-  var ballSpeed = 10;
-  var ball = new Ball(radius, radius, ballSpeed, radius, color);
-  ball.draw();
+    var radius = 20;
+    var color = "red";
+    var ballSpeed = 10;
+    var ball = new Ball(radius, radius, ballSpeed, radius, color);
+    ball.draw();
 
-  // tạo function để quả bóng chạy không ngừng
-  function animate() {
-    requestAnimationFrame(animate);//yêu cầu chạy function animate liên tục không nghỉ
-    c.clearRect(0, 0, canvas.width, canvas.height);
-    ball.move();
-  }
-  animate();
-
-  // thiết lập phím bấm để tạo trạng thái bắt đầu hay dừng cho quả bóng
-  addEventListener("keydown", function (event) {
-    if (event.keyCode == 32) {
-      ball.pause();
+    // tạo function để quả bóng chạy không ngừng
+    function animate() {
+        requestAnimationFrame(animate);//yêu cầu chạy function animate liên tục không nghỉ
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        ball.move();
     }
-  });
+
+    animate();
+
+    // thiết lập phím bấm để tạo trạng thái bắt đầu hay dừng cho quả bóng
+    addEventListener("keydown", function (event) {
+        if (event.keyCode == 32) {
+            ball.pause();
+        }
+    });
 
 </script>

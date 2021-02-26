@@ -6,8 +6,8 @@ public class Car {
     private String manufacturer;
     private int price;
 
-    public Car(int id,String name, String manufacturer, int price) {
-        this.id=id;
+    public Car(int id, String name, String manufacturer, int price) {
+        this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;

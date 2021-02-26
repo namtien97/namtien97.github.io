@@ -17,13 +17,13 @@ public class HomeController {
 
     @GetMapping(value = "/home")
     public String getHome(Model model) {
-        Car [] carCollection={
-                new Car(1,"xe ford","ford",700),
-                new Car(2,"xe ford","ford",700),
-                new Car(3,"xe ford","ford",700)
+        Car[] carCollection = {
+                new Car(1, "xe ford", "ford", 700),
+                new Car(2, "xe ford", "ford", 700),
+                new Car(3, "xe ford", "ford", 700)
         };
 
-        model.addAttribute(CARS,carCollection);
+        model.addAttribute(CARS, carCollection);
         model.addAttribute(APP_NAME, appName);
         return "home";
     }

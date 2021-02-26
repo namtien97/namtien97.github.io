@@ -18,68 +18,68 @@
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 
-    <script>
-        let canvas = document.getElementById("canvas");
-        let ctx = canvas.getContext('2d');
+<script>
+    let canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext('2d');
 
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    addEventListener("resize", () => {
         canvas.width = innerWidth;
         canvas.height = innerHeight;
+    });
 
-        addEventListener("resize", () => {
-            canvas.width = innerWidth;
-            canvas.height = innerHeight;
-        });
+    let cx = canvas.width / 2;
+    let cy = canvas.height / 2;
+    let r = 200;
+    let can2 = Math.sqrt(2);
+    let banKinh2 = (400 / can2 / can2 / can2);
+    let xHinhVuong1 = cx - ((Math.sqrt(r * r * 2)) * 0.5);
+    let yHinhVuong1 = cy - ((Math.sqrt(r * r * 2)) * 0.5);
+    let xHinhVuong2 = cx - ((Math.sqrt(banKinh2 * banKinh2 * 2)) * 0.5);
+    let yHinhVuong2 = cy - ((Math.sqrt(banKinh2 * banKinh2 * 2)) * 0.5);
 
-        let cx = canvas.width / 2;
-        let cy = canvas.height / 2;
-        let r = 200;
-        let can2 = Math.sqrt(2);
-        let banKinh2 = (400 / can2 / can2 / can2);
-        let xHinhVuong1 = cx - ((Math.sqrt(r * r * 2)) * 0.5);
-        let yHinhVuong1 = cy - ((Math.sqrt(r * r * 2)) * 0.5);
-        let xHinhVuong2 = cx - ((Math.sqrt(banKinh2 * banKinh2 * 2)) * 0.5);
-        let yHinhVuong2 = cy - ((Math.sqrt(banKinh2 * banKinh2 * 2)) * 0.5);
+    function draw() {
+        ctx.beginPath();
+        ctx.translate(this.cx, this.cy);
+        ctx.fillStyle = '#FDBF2E';
+        ctx.arc(cx, cy, r, 0, 2 * Math.PI, false);
+        ctx.fill();
 
-        function draw() {
-            ctx.beginPath();
-            ctx.translate(this.cx, this.cy);
-            ctx.fillStyle = '#FDBF2E';
-            ctx.arc(cx, cy, r, 0, 2 * Math.PI, false);
-            ctx.fill();
+        ctx.beginPath();
+        ctx.fillStyle = '#4773C1';
+        ctx.fillRect(xHinhVuong1, yHinhVuong1, (r * 2) / can2, (r * 2) / can2);
+        ctx.fill();
 
-            ctx.beginPath();
-            ctx.fillStyle = '#4773C1';
-            ctx.fillRect(xHinhVuong1, yHinhVuong1, (r * 2) / can2, (r * 2) / can2);
-            ctx.fill();
+        ctx.beginPath();
+        ctx.translate(this.cx, this.cy);
+        ctx.fillStyle = '#93D05E';
+        ctx.arc(cx, cy, banKinh2, 0, 2 * Math.PI, false);
+        ctx.fill();
 
-            ctx.beginPath();
-            ctx.translate(this.cx, this.cy);
-            ctx.fillStyle = '#93D05E';
-            ctx.arc(cx, cy, banKinh2, 0, 2 * Math.PI, false);
-            ctx.fill();
+        ctx.beginPath();
+        ctx.fillStyle = '#C35819';
+        ctx.fillRect(xHinhVuong2, yHinhVuong2, (banKinh2 * 2) / can2, (banKinh2 * 2) / can2);
+        ctx.fill();
 
-            ctx.beginPath();
-            ctx.fillStyle = '#C35819';
-            ctx.fillRect(xHinhVuong2, yHinhVuong2, (banKinh2 * 2) / can2, (banKinh2 * 2) / can2);
-            ctx.fill();
+        ctx.beginPath();
+        ctx.translate(this.cx, this.cy);
+        ctx.fillStyle = 'white';
+        ctx.arc(cx, cy, banKinh2 / can2, 0, 2 * Math.PI, false);
+        ctx.fill();
+    };
 
-            ctx.beginPath();
-            ctx.translate(this.cx, this.cy);
-            ctx.fillStyle = 'white';
-            ctx.arc(cx, cy, banKinh2 / can2 , 0, 2 * Math.PI, false);
-            ctx.fill();
-        };
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        draw();
+    };
 
-        function animate() {
-            requestAnimationFrame(animate);
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            draw();
-        };
-
-        animate();
-    </script>
+    animate();
+</script>
 </body>
 
 </html>

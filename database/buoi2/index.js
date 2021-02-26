@@ -50,7 +50,7 @@ con.connect(function (err) {
 //     "plantName": "Cay tai loc"
 // }]
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine", "ejs");
 

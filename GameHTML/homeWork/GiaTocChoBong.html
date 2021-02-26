@@ -1,25 +1,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GIA TOC CHO BONG</title>
-  <style>
-    #canvas {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIA TOC CHO BONG</title>
+    <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
-  <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 
-  <script>
+<script>
     const canvas = document.getElementById("canvas");
     const c = canvas.getContext('2d');
 
@@ -28,59 +28,62 @@
 
 
     class Ball {
-      constructor(radius, color, x, y) {
-        this.radius = radius;
-        this.color = color;
-        this.x = x;
-        this.y = y;
-        this.giatoc = 0;
-        this.vantoc = 0;
-        this.hesomasat = 0.98; //hệ số suy hao vận tốc do ma sát
-        this.thoigiantacdong = 0;
-      }
-
-      draw() {
-        c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.fillStyle = this.color;
-        c.fill();
-        c.closePath();
-      }
-
-      hit() {
-        ball.giatoc = 10;  //lực đánh vào bóng lâu hay chậm
-        ball.thoigiantacdong = 5; //thời gian tác dụng lực cỡ vài frame màn hình
-      }
-
-      move() {
-        if (this.giatoc != 0 && ball.thoigiantacdong-- > 0) {
-          this.vantoc += this.giatoc;
-          this.giatoc = 0;
+        constructor(radius, color, x, y) {
+            this.radius = radius;
+            this.color = color;
+            this.x = x;
+            this.y = y;
+            this.giatoc = 0;
+            this.vantoc = 0;
+            this.hesomasat = 0.98; //hệ số suy hao vận tốc do ma sát
+            this.thoigiantacdong = 0;
         }
-        this.vantoc = this.vantoc * this.hesomasat;
-        this.x += this.vantoc; //Chuyển động tịnh tiến đều từ trái sang phải
-        if (this.x - this.radius >= canvas.width) {
-          //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
-          this.x = - this.radius;
+
+        draw() {
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.closePath();
         }
-        this.draw();
-      }
+
+        hit() {
+            ball.giatoc = 10;  //lực đánh vào bóng lâu hay chậm
+            ball.thoigiantacdong = 5; //thời gian tác dụng lực cỡ vài frame màn hình
+        }
+
+        move() {
+            if (this.giatoc != 0 && ball.thoigiantacdong-- > 0) {
+                this.vantoc += this.giatoc;
+                this.giatoc = 0;
+            }
+            this.vantoc = this.vantoc * this.hesomasat;
+            this.x += this.vantoc; //Chuyển động tịnh tiến đều từ trái sang phải
+            if (this.x - this.radius >= canvas.width) {
+                //nếu vượt quá cạnh phải màn hình thì quay lại từ cạnh bên trái
+                this.x = -this.radius;
+            }
+            this.draw();
+        }
     }
+
     let radius = 30;
     let ball = new Ball(radius, 'red', radius, canvas.height * 0.5);
     addEventListener("click", (event) => {
-      ball.hit();
+        ball.hit();
     });
+
     function animate() {
-      requestAnimationFrame(animate);
-      c.clearRect(0, 0, canvas.width, canvas.height);
-      c.font = "20px Arial";
-      c.fillStyle = 'black';
-      ball.move();
+        requestAnimationFrame(animate);
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        c.font = "20px Arial";
+        c.fillStyle = 'black';
+        ball.move();
     }
+
     animate();
 
-  </script>
+</script>
 </body>
 
 </html>

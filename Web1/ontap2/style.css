@@ -1,76 +1,82 @@
 body {
-  background-color: #008dc9;
+    background-color: #008dc9;
 }
+
 .header img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  padding-bottom: 10px;
-  border-radius: 20px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 10px;
+    border-radius: 20px;
 }
 
 .body {
-  background-color: #ffffff;
-  border: 1px;
-  border-radius: 20px;
+    background-color: #ffffff;
+    border: 1px;
+    border-radius: 20px;
 }
+
 .what {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .what img {
-  padding: 50px;
+    padding: 50px;
 }
+
 .what p {
-  margin: 0px;
-  padding: 50px;
-  font-weight: 700;
+    margin: 0px;
+    padding: 50px;
+    font-weight: 700;
 }
 
 .symptoms {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .symptoms1 {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .symptoms1-1,
 .prevention1-1 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
 }
 
-.symptoms1-1 p ,
+.symptoms1-1 p,
 .prevention1-1 p {
-  font-size: 1.2rem;
-  color: blue;
-  text-transform: uppercase;
+    font-size: 1.2rem;
+    color: blue;
+    text-transform: uppercase;
 }
 
 .symptoms1-header,
 .prevention-header {
-  font-size: 2rem;
-  color: red;
-  text-transform: capitalize;
+    font-size: 2rem;
+    color: red;
+    text-transform: capitalize;
 }
+
 .symptoms1-1 img,
 .prevention1-1 img {
-  display: block;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-.prevention1-1-1{
+
+.prevention1-1-1 {
     text-transform: ;
 }

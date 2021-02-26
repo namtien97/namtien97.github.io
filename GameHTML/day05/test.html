@@ -8,61 +8,64 @@
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
-    <script>
-        let c = canvas.getContext('2d');
+<canvas id="canvas"></canvas>
+<script>
+    let c = canvas.getContext('2d');
 
+    c.width = innerWidth;
+    c.height = innerHeight;
+
+    addEventListener("resize", function () {
         c.width = innerWidth;
         c.height = innerHeight;
+    });
 
-        addEventListener("resize", function () {
-            c.width = innerWidth;
-            c.height = innerHeight;
-        });
-        class Ball {
-            constructor(x, y, radius, color) {
-                this.x = x;
-                this.y = y;
-                this.radius = radius;
-                this.color = color;
-            }
-            draw() {
-                c.beginPath();
-                c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-                c.fillStyle = this.color;
-                c.fill();
-                c.stroke();
-                c.closePath();
-            }
+    class Ball {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
         }
 
-        // let count = 0;
-        // function repeatingFunc() {
-        //     if (count < 11) {
-        //         console.log(count);
-        //         count += 1;
+        draw() {
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.stroke();
+            c.closePath();
+        }
+    }
 
-        //     }
-        //     setTimeout(repeatingFunc, 1000);
-        // }
-        // setTimeout(repeatingFunc, 1000);
-        let ball = new Ball(100, 100, 20, 'red');
+    // let count = 0;
+    // function repeatingFunc() {
+    //     if (count < 11) {
+    //         console.log(count);
+    //         count += 1;
+
+    //     }
+    //     setTimeout(repeatingFunc, 1000);
+    // }
+    // setTimeout(repeatingFunc, 1000);
+    let ball = new Ball(100, 100, 20, 'red');
+    ball.draw();
+    // function repeatingFunc() {
+    //     c.clearRect(0, 0, c.width, c.height);
+    //     ball.x = ball.x + 5;
+    //     ball.draw();
+    //     setTimeout(repeatingFunc, 100);
+    // }
+    // setTimeout(repeatingFunc, 100);
+    function waitFunc() {
+        c.clearRect(0, 0, c.width, c.height);
+        ball.x = ball.x + 5;
         ball.draw();
-        // function repeatingFunc() {
-        //     c.clearRect(0, 0, c.width, c.height);
-        //     ball.x = ball.x + 5;
-        //     ball.draw();
-        //     setTimeout(repeatingFunc, 100);
-        // }
-        // setTimeout(repeatingFunc, 100);
-        function waitFunc() {
-            c.clearRect(0, 0, c.width, c.height);
-            ball.x = ball.x + 5;
-            ball.draw();
-            setInterval(waitFunc, 100)
-        }
-        setInterval(waitFunc, 100);
-    </script>
+        setInterval(waitFunc, 100)
+    }
+
+    setInterval(waitFunc, 100);
+</script>
 </body>
 
 </html>

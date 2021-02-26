@@ -18,90 +18,91 @@
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
+<canvas id="canvas"></canvas>
 
-    <script>
-        let canvas = document.getElementById("canvas");
-        let c = canvas.getContext('2d');
+<script>
+    let canvas = document.getElementById("canvas");
+    let c = canvas.getContext('2d');
 
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+
+    addEventListener("resize", () => {
         canvas.width = innerWidth;
         canvas.height = innerHeight;
+    });
 
-        addEventListener("resize", () => {
-            canvas.width = innerWidth;
-            canvas.height = innerHeight;
-        });
-        class Point {
-            constructor(x, y) {
-                this.x = x;
-                this.y = y;
-            }
+    class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    var pointA = new Point(canvas.width / 2, canvas.height / 4);
+    var pointB = new Point(canvas.width * 0.1, canvas.height * 0.9);
+    var pointC = new Point(canvas.width * 0.9, canvas.height * 0.9);
+    var dash = [5, 10];
+
+    class Triangle {
+        constructor(pointA, pointB, pointC) {
+            this.PointA = pointA;
+            this.PointB = pointB;
+            this.PointC = pointC;
         }
 
-        var pointA = new Point(canvas.width / 2, canvas.height / 4);
-        var pointB = new Point(canvas.width * 0.1, canvas.height * 0.9);
-        var pointC = new Point(canvas.width * 0.9, canvas.height * 0.9);
-        var dash = [5, 10];
-        class Triangle {
-            constructor(pointA, pointB, pointC) {
-                this.PointA = pointA;
-                this.PointB = pointB;
-                this.PointC = pointC;
-            }
-            drawTriangle() {
-                c.beginPath();
-                c.moveTo(pointA.x, pointA.y);
-                c.font = "27px sans-serif";
-                c.fillText("A", pointA.x - 15, pointA.y - 15);
-                c.lineTo(pointB.x, pointB.y);
-                c.font = "27px sans-serif";
-                c.fillText("B", pointB.x - 15, pointB.y - 15);
-                c.lineTo(pointC.x, pointC.y);
-                c.font = "27px sans-serif";
-                c.fillText("C", pointC.x + 10, pointC.y + 15);
-                c.lineTo(pointA.x, pointA.y);
-                c.closePath();
-                c.stroke();
+        drawTriangle() {
+            c.beginPath();
+            c.moveTo(pointA.x, pointA.y);
+            c.font = "27px sans-serif";
+            c.fillText("A", pointA.x - 15, pointA.y - 15);
+            c.lineTo(pointB.x, pointB.y);
+            c.font = "27px sans-serif";
+            c.fillText("B", pointB.x - 15, pointB.y - 15);
+            c.lineTo(pointC.x, pointC.y);
+            c.font = "27px sans-serif";
+            c.fillText("C", pointC.x + 10, pointC.y + 15);
+            c.lineTo(pointA.x, pointA.y);
+            c.closePath();
+            c.stroke();
 
 
-                c.beginPath();
-                c.setLineDash([5,10]);
-                c.strokeStyle = "#66CCFF";
-                c.moveTo((pointA.x + pointB.x) / 2, (pointA.y + pointB.y) / 2);
-                c.lineTo(pointC.x, pointC.y);
-                c.closePath();
-                c.stroke();
+            c.beginPath();
+            c.setLineDash([5, 10]);
+            c.strokeStyle = "#66CCFF";
+            c.moveTo((pointA.x + pointB.x) / 2, (pointA.y + pointB.y) / 2);
+            c.lineTo(pointC.x, pointC.y);
+            c.closePath();
+            c.stroke();
 
 
-                c.beginPath();
-                c.setLineDash([5,10]);
-                c.strokeStyle = "#66CCFF";
-                c.moveTo((pointB.x + pointC.x) / 2, (pointB.y + pointC.y) / 2);
-                c.lineTo(pointA.x, pointA.y);
-                c.closePath();
-                c.stroke();
+            c.beginPath();
+            c.setLineDash([5, 10]);
+            c.strokeStyle = "#66CCFF";
+            c.moveTo((pointB.x + pointC.x) / 2, (pointB.y + pointC.y) / 2);
+            c.lineTo(pointA.x, pointA.y);
+            c.closePath();
+            c.stroke();
 
 
-                c.beginPath();
-                c.setLineDash([5,10]);
-                c.strokeStyle = "#66CCFF";
-                c.moveTo((pointA.x + pointC.x) / 2, (pointA.y + pointC.y) / 2);
-                c.lineTo(pointB.x, pointB.y);
-                c.closePath();
-                c.stroke();
-
-            };
+            c.beginPath();
+            c.setLineDash([5, 10]);
+            c.strokeStyle = "#66CCFF";
+            c.moveTo((pointA.x + pointC.x) / 2, (pointA.y + pointC.y) / 2);
+            c.lineTo(pointB.x, pointB.y);
+            c.closePath();
+            c.stroke();
 
         };
 
-
-        let triangle = new Triangle(pointA, pointB, pointC);
-        triangle.drawTriangle();
-        
+    };
 
 
+    let triangle = new Triangle(pointA, pointB, pointC);
+    triangle.drawTriangle();
 
-    </script>
+
+</script>
 </body>
 
 </html>

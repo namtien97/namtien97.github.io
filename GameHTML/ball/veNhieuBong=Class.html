@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-  <canvas id="canvas" style="border: 1px solid black;"></canvas>
-  <script>
+<canvas id="canvas" style="border: 1px solid black;"></canvas>
+<script>
 
     var canvas = document.getElementById('canvas');
     canvas.width = innerWidth;
@@ -17,21 +17,21 @@
     var c = canvas.getContext('2d');
 
     class Ball {
-      constructor(x, y, radius, color) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.color = color;
-      }
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
 
-      draw() {
-        c.beginPath();
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        c.fillStyle = this.color;
-        c.fill();
-        c.stroke();
-        c.closePath();
-      }
+        draw() {
+            c.beginPath();
+            c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+            c.fillStyle = this.color;
+            c.fill();
+            c.stroke();
+            c.closePath();
+        }
     }
 
 
@@ -48,7 +48,7 @@
     let ball3 = new Ball(canvas.width - 50, canvas.height - 40, 30, "aqua");
     ball3.draw();
 
-  </script>
+</script>
 </body>
 
 </html>

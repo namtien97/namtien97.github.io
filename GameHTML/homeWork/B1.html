@@ -8,48 +8,48 @@
 </head>
 
 <body>
-    <canvas id="canvas" style="padding: 20px;"></canvas>
-    <script>
-        var canvas = document.getElementById("canvas");
-        var c = canvas.getContext("2d");
-        canvas.width = window.innerWidth * 0.9;
-        canvas.height = window.innerHeight * 0.9;
-        window.addEventListener('resize', function () {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        })
+<canvas id="canvas" style="padding: 20px;"></canvas>
+<script>
+    var canvas = document.getElementById("canvas");
+    var c = canvas.getContext("2d");
+    canvas.width = window.innerWidth * 0.9;
+    canvas.height = window.innerHeight * 0.9;
+    window.addEventListener('resize', function () {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    })
 
-        function draw() {
-            c.lineWidth = 10;
-            c.beginPath();
-            c.rect(0, 0, canvas.width, canvas.height);
-            c.strokeStyle = "#000000";
-            c.stroke();
-            c.closePath();
+    function draw() {
+        c.lineWidth = 10;
+        c.beginPath();
+        c.rect(0, 0, canvas.width, canvas.height);
+        c.strokeStyle = "#000000";
+        c.stroke();
+        c.closePath();
 
-            c.beginPath();
-            c.moveTo(0, 0);
-            c.lineTo(canvas.width, canvas.height);
-            c.strokeStyle = "#96D163"
-            c.stroke();
-            c.closePath();
+        c.beginPath();
+        c.moveTo(0, 0);
+        c.lineTo(canvas.width, canvas.height);
+        c.strokeStyle = "#96D163"
+        c.stroke();
+        c.closePath();
 
-            c.beginPath();
-            c.moveTo(canvas.width, 0);
-            c.lineTo(0, canvas.height);
-            c.strokeStyle = "#96D163"
-            c.stroke();
-            c.closePath();
-        };
+        c.beginPath();
+        c.moveTo(canvas.width, 0);
+        c.lineTo(0, canvas.height);
+        c.strokeStyle = "#96D163"
+        c.stroke();
+        c.closePath();
+    };
 
-        function animate() {
-            c.clearRect(0, 0, canvas.width, canvas.height);
-            window.requestAnimationFrame(animate);
-            draw();
-        }
+    function animate() {
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        window.requestAnimationFrame(animate);
+        draw();
+    }
 
-        animate();
-    </script>
+    animate();
+</script>
 </body>
 
 </html>

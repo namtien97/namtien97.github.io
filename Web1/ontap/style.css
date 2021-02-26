@@ -1,98 +1,108 @@
 body {
-  background-color: #292d33;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-left: 170px;
-  padding-right: 170px;
+    background-color: #292d33;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 170px;
+    padding-right: 170px;
 }
+
 .header {
-  color: white;
+    color: white;
 }
+
 .header-1 {
-  font-size: 4rem;
-  margin: 20px 0 20px;
+    font-size: 4rem;
+    margin: 20px 0 20px;
 }
+
 .header-2 {
-  font-size: 0.9rem;
-  font-style: italic;
-  margin-bottom: 50px;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 50px;
 }
+
 .body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .body img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
 
 .body-1 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .body-1:hover .body-info {
-  transition: 1s;
-  transition-timing-function: ease-out-ease-in-out;
-  top: 50px;
+    transition: 1s;
+    transition-timing-function: ease-out-ease-in-out;
+    top: 50px;
 }
 
 .body-info {
-  position: absolute;
-  top: 241px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  width: 68%;
+    position: absolute;
+    top: 241px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 68%;
 }
+
 .body-info-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 0;
 }
+
 .body-info-position {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #db545a;
-  margin: 10px 0 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #db545a;
+    margin: 10px 0 10px;
 }
+
 .body-info-detail {
-  font-size: 0.9rem;
-  font-style: italic;
-  margin: 10px 0 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 10px 0 10px;
 }
+
 .body-info-more {
-  color: #b3b3b3;
-  padding: 15px;
-  margin-bottom: 10px;
+    color: #b3b3b3;
+    padding: 15px;
+    margin-bottom: 10px;
 }
+
 .body-info-more i {
-  padding: 0 5px 0;
+    padding: 0 5px 0;
 }
 
 .footer {
-  color: white;
-  margin-top: 196px;
+    color: white;
+    margin-top: 196px;
 }
+
 .footer button {
-  background-color: #292d33;
-  border-color: white;
-  padding: 15px 32px;
-  color: white;
-  font-weight: 700;
+    background-color: #292d33;
+    border-color: white;
+    padding: 15px 32px;
+    color: white;
+    font-weight: 700;
 }

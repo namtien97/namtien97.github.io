@@ -1,11 +1,11 @@
-.outer-flex{
+.outer-flex {
     display: flex;
     flex-direction: column-reverse;
     height: 300px;
     border: solid 1px black;
 }
 
-.flex-item{
+.flex-item {
     width: 100px;
     height: 100px;
     background: red;

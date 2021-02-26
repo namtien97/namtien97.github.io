@@ -50,14 +50,14 @@ public class Main4 extends Application {
         dialog.getDialogPane().setContent(grid);
 
         dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == loginButtonType){
+            if (dialogButton == loginButtonType) {
                 return new Pair<>(userName.getText(), password.getText());
             }
             return null;
-        } );
+        });
         Optional<Pair<String, String>> result = dialog.showAndWait();
         result.ifPresent(userNamepassword -> {
-            System.out.println("Username="+userNamepassword.getKey()+", Password="+userNamepassword.getValue());
+            System.out.println("Username=" + userNamepassword.getKey() + ", Password=" + userNamepassword.getValue());
         });
     }
 }
